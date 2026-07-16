@@ -1,0 +1,51 @@
+{
+  "duplicate_unit_ids": [],
+  "evidence_link_count": 57,
+  "generative_test_status_counts": {
+    "pass": 16
+  },
+  "mode_counts": {
+    "paper_reading": 9,
+    "result_storyline": 3,
+    "topic_ideation": 4
+  },
+  "nontriviality_test_status_counts": {
+    "pending": 16
+  },
+  "recurrence_gate_status_counts": {
+    "pending": 16
+  },
+  "review_status_counts": {
+    "candidate": 16
+  },
+  "schema_version": 1,
+  "scientific_boundary_status_counts": {
+    "pending": 7,
+    "pending_primary_evidence": 9
+  },
+  "source_channel_counts": {
+    "pdf": 12,
+    "video": 9,
+    "zsxq": 36
+  },
+  "stage_count": 16,
+  "stage_unit_counts": {
+    "paper_reading.claim_boundary": 1,
+    "paper_reading.entry_point": 1,
+    "paper_reading.evidence_chain": 1,
+    "paper_reading.figure_evidence_task": 1,
+    "paper_reading.hypothesis_reconstruction": 1,
+    "paper_reading.knowledge_gap": 1,
+    "paper_reading.reading_purpose": 1,
+    "paper_reading.scientific_question": 1,
+    "paper_reading.transferable_design": 1,
+    "result_storyline.evidence_break": 1,
+    "result_storyline.highest_information_gain": 1,
+    "result_storyline.strongest_claim": 1,
+    "topic_ideation.aim_experiment_figure": 1,
+    "topic_ideation.consensus_dispute_gap": 1,
+    "topic_ideation.context_and_constraints": 1,
+    "topic_ideation.falsifiable_hypothesis": 1
+  },
+  "unit_count": 16
+}

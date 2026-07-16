@@ -1,0 +1,9 @@
+{
+  "case_count": 16,
+  "failed_case_ids": [],
+  "failed_count": 0,
+  "passed_count": 16,
+  "schema_version": 1,
+  "selection_policy": "newest_available_evaluation_per_case",
+  "unit_count": 16
+}

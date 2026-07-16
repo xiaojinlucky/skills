@@ -1,0 +1,16 @@
+{"case_id": "forward-001", "schema_version": 1, "task_mode": "paper_reading", "user_request": "bulk RNA-seq显示通路富集，单细胞通讯推断显示配体受体增强，论文声称该细胞通过该通路驱动疾病"}
+{"case_id": "forward-002", "schema_version": 1, "task_mode": "paper_reading", "user_request": "单细胞论文从数千差异基因中选择一个受体开展动物实验，但正文只强调其显著性"}
+{"case_id": "forward-003", "schema_version": 1, "task_mode": "paper_reading", "user_request": "论文显示A与B相关，敲低A后疾病表型改善，并声称B介导A的作用，但没有A×B析因比较"}
+{"case_id": "forward-004", "schema_version": 1, "task_mode": "paper_reading", "user_request": "一篇多组学论文 Figure 2 同时含差异基因、富集、细胞通讯和验证实验，标题声称揭示机制"}
+{"case_id": "forward-005", "schema_version": 1, "task_mode": "paper_reading", "user_request": "一篇论文提出代谢物经外泌体进入巨噬细胞并改变纤维化，但摘要中的细胞归属和方向词不完整"}
+{"case_id": "forward-006", "schema_version": 1, "task_mode": "paper_reading", "user_request": "文献称某免疫细胞在疾病中研究很少，但相邻细胞类型和同一路径已有大量报道"}
+{"case_id": "forward-007", "schema_version": 1, "task_mode": "paper_reading", "user_request": "用户有120篇肿瘤免疫文献，既要两天内画领域地图，又要判断其中一篇是否证明直接细胞互作"}
+{"case_id": "forward-008", "schema_version": 1, "task_mode": "paper_reading", "user_request": "一篇空间转录组论文同时描述细胞邻域、配体受体和预后关联，但作者主问题表达宽泛"}
+{"case_id": "forward-009", "schema_version": 1, "task_mode": "paper_reading", "user_request": "给出一篇新的多组学筛选论文，要求提炼其可复用研究设计"}
+{"case_id": "forward-010", "schema_version": 1, "task_mode": "result_storyline", "user_request": "已有A与B相关、B与C相关和A与C相关，用户准备写A-B-C机制链"}
+{"case_id": "forward-011", "schema_version": 1, "task_mode": "result_storyline", "user_request": "候选蛋白与疾病相关，下一步可选分子对接、扩大公共数据或在目标细胞中扰动并测核心表型"}
+{"case_id": "forward-012", "schema_version": 1, "task_mode": "result_storyline", "user_request": "单细胞数据中A与B相关，A过表达后B和表型C同时变化，用户拟写A通过B调控C"}
+{"case_id": "forward-013", "schema_version": 1, "task_mode": "topic_ideation", "user_request": "三个Aim分别命名为单细胞、空间转录组和动物实验，却没有科学问题"}
+{"case_id": "forward-014", "schema_version": 1, "task_mode": "topic_ideation", "user_request": "bulk RNA-seq显示通路下降，单细胞显示目标细胞中通路评分升高，但缺少细胞组成校正和同层级验证"}
+{"case_id": "forward-015", "schema_version": 1, "task_mode": "topic_ideation", "user_request": "实验室没有原代嗜酸性粒细胞体系，学生拟研究其在肿瘤代谢中的功能"}
+{"case_id": "forward-016", "schema_version": 1, "task_mode": "topic_ideation", "user_request": "候选假设包含代谢物、受体、转录因子、巨噬细胞极化和肿瘤生长五个节点，但只有两端线索"}

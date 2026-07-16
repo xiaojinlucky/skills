@@ -1,0 +1,46 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Raw or private source material
+corpus/
+scratch/
+raw/
+source-materials/
+*.sqlite
+*.sqlite3
+*.db
+*.pdf
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.zip
+*.7z
+*.rar
+*.wav
+*.mp3
+*.mp4
+*.m4a
+
+# Runtime and cache
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.log
+*.tmp
+*.bak
+*.backup*
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
