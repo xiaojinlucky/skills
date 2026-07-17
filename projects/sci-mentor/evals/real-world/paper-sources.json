@@ -1,0 +1,42 @@
+[
+  {
+    "case_id": "paper-001",
+    "doi": "10.1038/s41590-023-01475-4",
+    "pmcid": "PMC11088947",
+    "source_type": "author_pdf",
+    "source_sha256": "e971cc81feb907a8ec23a94101342988554364e321faa4c53008c9f97c140843",
+    "input_sha256": "5a4d888e600342b00d26b4174deb72a9133c45f44c422d96cc83a09b1ec7c1c8"
+  },
+  {
+    "case_id": "paper-002",
+    "doi": "10.1038/s41586-020-2941-1",
+    "pmcid": "PMC7611626",
+    "source_type": "europe_pmc_jats",
+    "source_sha256": "3c8bbec85e4756cfc5bca8c4b75d3366ad441b5d4b88fdf0af3a8ac793a7b8cd",
+    "input_sha256": "7f2a0ae63f0f4e7957f40fa3f200502b8ff5ea5067ae9b5c1843061c83936542"
+  },
+  {
+    "case_id": "paper-003",
+    "doi": "10.1038/nature20165",
+    "pmcid": "PMC5149074",
+    "source_type": "europe_pmc_jats",
+    "source_sha256": "c81515d5b9f246b3d20c5323e007ca5cffbd477e6b302822c880f9abf0266c7a",
+    "input_sha256": "aadbc1a357a3a7ec94d0df11e130a665515638191ef929ba41cc006de3185369"
+  },
+  {
+    "case_id": "paper-004",
+    "doi": "10.1038/s41467-022-30755-0",
+    "pmcid": "PMC9184522",
+    "source_type": "europe_pmc_jats",
+    "source_sha256": "dca2fc8bd4b4cec835edaf6c25f5f0e85731639b56f3c14bf6aaf8473e7f3e3e",
+    "input_sha256": "33d94d6073af1ea033717489f4e3c983c77d67fe2f6f442f135047f07d75a21d"
+  },
+  {
+    "case_id": "paper-005",
+    "doi": "10.1038/s41588-025-02193-3",
+    "pmcid": "PMC12165841",
+    "source_type": "europe_pmc_jats",
+    "source_sha256": "60105525850059217f7fc44bcf634a6a55a1d10ddec15a1cc133c9ff960bf2fb",
+    "input_sha256": "6b9d88b9d6d86712a7632179358758f3873f3b7ac1b7e79887766f4e473a40a8"
+  }
+]

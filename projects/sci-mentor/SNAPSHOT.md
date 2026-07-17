@@ -12,13 +12,13 @@
 
 - 正式文件数为 28
 
-- 文件总字节数为 8123497
+- 文件总字节数为 8124046
 
-- 相对路径与逐文件 SHA256 清单的合并 SHA256 为 `da0bc7de5efa14bde4950e892cfd3cf02ea1b27da86f75cfb212fcc63a5ee116`
+- 相对路径与逐文件 SHA256 清单的合并 SHA256 为 `1e3ec09abb9972facb28f071850c0f770a371cc1653df7cfa59ccf773eb216a7`
 
 上述 SHA256 对应 Git 暂存前的本机运行源和本地仓库工作区，复制后逐文件比较为 0 个不一致。
 
-- Git 暂存区中的 `skills/sci-mentor` 子树 SHA-1 为 `da582b2e42bb273368394a0745a3e9228c6c0a1d`
+- Git 暂存区中的 `skills/sci-mentor` 子树 SHA-1 为 `b73ec35f51c7622fe6184ace581ff52490c1055a`
 
 Git 会按照仓库 `.gitattributes` 统一文本换行。远端提交内容应使用 Git 子树 SHA-1 核验，本机原始文件复制过程使用前述 SHA256 清单核验。
 
