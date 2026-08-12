@@ -1,0 +1,7 @@
+interface:
+  display_name: "因果与回补"
+  short_description: "用必要性、充分性、回补和关键对照做实因果关系及结论边界"
+  brand_color: "#2F6B5F"
+  default_prompt: "Use $causality-rescue to design causal and rescue evidence for this key relationship."
+policy:
+  allow_implicit_invocation: true

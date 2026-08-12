@@ -1,9 +1,7 @@
 来源说明
 
-本目录按用户请求命名为 `avoid-defense-writing`，内容取自公开 Skill：
+本目录按用户请求命名为 `avoid-defense-writing`，内容取自服务器现役 Skill：
 
-https://github.com/Kiterlin/anti-defensive-writing
+`/hwdata/home/jinqc/.codex-shared/skills/anti-defensive-writing`
 
-来源提交：`088df470b2871a66315698cd55b6a9fd0301d918`
-
-原项目的 MIT License 已随目录保留。
+服务器版本保留为本次上传的真实来源；目录名和调用名按用户要求统一为 `avoid-defense-writing`。
