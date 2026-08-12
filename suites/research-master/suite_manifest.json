@@ -1,0 +1,76 @@
+{
+  "suite": "research-master",
+  "display_name": "做科研的大师兄",
+  "status": "active",
+  "installed_transaction": "research-master-20260722144626650",
+  "logical_modules": 18,
+  "new_skills": 17,
+  "shared_resources_are_callable_skills": false,
+  "orchestrator": "meta-research-hub",
+  "method_skills": [
+    "research-entry",
+    "literature-mining",
+    "topic-convergence",
+    "innovation-judgment",
+    "hypothesis-construction",
+    "mechanism-design",
+    "causality-rescue",
+    "pre-experiment-design",
+    "grant-and-opening",
+    "sci-writing-and-revision",
+    "review-writing",
+    "thesis-and-defense",
+    "research-mindset"
+  ],
+  "auxiliary_modules": [
+    "meta-sci-init",
+    "literature-deep-reading",
+    "bio-tutor",
+    "xhs-bioinfo-writing"
+  ],
+  "bio_tutor_binding": {
+    "logical_name": "bio-tutor",
+    "global_entry": "bio-tutorial-writer",
+    "project_implementation": "/hwdata/home/jinqc/bio_tutorial_factory/SKILL.md",
+    "integration_contract": "integrations/bio-tutor.md",
+    "integration_status": "ready"
+  },
+  "adjacent_output_systems": [
+    "academic-html-report"
+  ],
+  "adjacent_output_bindings": {
+    "academic-html-report": {
+      "live_skill": "/hwdata/home/jinqc/.codex-shared/skills/academic-html-report/SKILL.md",
+      "integration_contract": "integrations/academic-html-report.md",
+      "integration_status": "ready"
+    }
+  },
+  "shared": [
+    "shared/research-core.md",
+    "shared/expression-core.md",
+    "shared/routing-and-authority.md",
+    "shared/research-state.md",
+    "shared/execution-and-validity.md",
+    "methods/method-cards.md",
+    "integrations/bio-tutor.md",
+    "integrations/academic-html-report.md",
+    "sources/task-expression-cards.md",
+    "sources/source-index.json"
+  ],
+  "runtime_contract": {
+    "relevant_skill_limit": null,
+    "full_lifecycle_may_use_all_13_method_skills": true,
+    "ordinary_dialogue_added_agent_calls": 0,
+    "ordinary_dialogue_reads_raw_corpus": false,
+    "same_skill_may_repeat_without_state_change": false,
+    "shared_core_loads_per_task": 1
+  },
+  "cutover": {
+    "install_ready": true,
+    "installer": "scripts/install-suite.mjs",
+    "live_changes_allowed_in_staging": false,
+    "remove_at_atomic_cutover": [
+      "sci-mentor"
+    ]
+  }
+}

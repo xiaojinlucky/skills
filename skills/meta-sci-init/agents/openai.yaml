@@ -1,0 +1,7 @@
+interface:
+  display_name: "开题向导"
+  short_description: "把模糊科研起点推进到第一版问题、假设、预实验和开题方案"
+  brand_color: "#2F6B5F"
+  default_prompt: "Use $meta-sci-init to take this new project from a broad starting point to a first opening proposal."
+policy:
+  allow_implicit_invocation: true

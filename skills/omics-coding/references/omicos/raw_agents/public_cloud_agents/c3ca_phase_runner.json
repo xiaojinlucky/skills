@@ -1,0 +1,27 @@
+{
+  "body": "# c3CA Phase Runner — locked\n\nThis agent is part of the **lab** subscription tier.\n\nSubscribe at https://app.omicverse.com/#/subscriptions to unlock the full prompt.\n",
+  "caller_plan_source": "no_token",
+  "category": "single_cell_analysis",
+  "category_order": "20",
+  "description": "Runs exactly one phase of the rust-NMF 3CA front-end or cNMF-augmented 3CA backend workflow. Use this agent when the user asks to execute, resume, inspect, or debug a rust_nmf or sc_c3ca_backend_skill phase.",
+  "example_prompts": [
+    "Run phase 02 of the rust-NMF 3CA front-end and report the job status.",
+    "Run phase 05 of the c3CA backend from this params.yaml.",
+    "Inspect why the previous c3CA backend phase wrote phase_failed.json."
+  ],
+  "hash": "95754fc2fa5b0416",
+  "id": "c3ca_phase_runner",
+  "locked": true,
+  "name": "c3CA Phase Runner",
+  "raw_md": "---\nid: c3ca_phase_runner\nname: c3CA Phase Runner\ndescription: Runs exactly one phase of the rust-NMF 3CA front-end or cNMF-augmented 3CA backend workflow. Use this agent when the user asks to execute, resume, inspect, or debug a rust_nmf or sc_c3ca_backend_skill phase.\ntier: lab\ntoolsets:\n  - file_manager\n  - python_interpreter\n  - shell\nskills:\n  - rust_nmf\n  - sc_c3ca_backend_skill\ncategory: single_cell_analysis\ncategory_order: 20\nsummary: \"逐阶段执行 3CA 前端与后端工作流（一次只跑一个 phase）\"\nuse_when: \"用于 rust-NMF 3CA 前端各 phase、c3CA 后端 MP-analysis 各 phase、phase 间交接，以及单个 phase 的失败排查\"\nexample_prompts:\n  - Run phase 02 of the rust-NMF 3CA front-end and report the job status.\n  - Run phase 05 of the c3CA backend from this params.yaml.\n  - Inspect why the previous c3CA backend phase wrote phase_failed.json.\n---\n\n# c3CA Phase Runner — locked\n\nThis agent is part of the **lab** subscription tier.\n\nSubscribe at https://app.omicverse.com/#/subscriptions to unlock the full prompt.\n",
+  "required_tier": "lab",
+  "summary": "逐阶段执行 3CA 前端与后端工作流（一次只跑一个 phase）",
+  "tier": "lab",
+  "toolsets": [
+    "file_manager",
+    "python_interpreter",
+    "shell"
+  ],
+  "updated_at": 1781717162,
+  "use_when": "用于 rust-NMF 3CA 前端各 phase、c3CA 后端 MP-analysis 各 phase、phase 间交接，以及单个 phase 的失败排查"
+}

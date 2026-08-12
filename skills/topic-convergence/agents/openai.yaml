@@ -1,0 +1,7 @@
+interface:
+  display_name: "方向收敛"
+  short_description: "把宽方向压成具体、能执行、能否定的科研主问题与最快验证"
+  brand_color: "#2F6B5F"
+  default_prompt: "Use $topic-convergence to turn my broad direction into one executable research mainline."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,36 @@
+{
+  "body": "# Single-cell Perturbation Analyst — locked\n\nThis agent is part of the **pro** subscription tier.\n\nSubscribe at https://app.omicverse.com/#/subscriptions to unlock the full prompt.\n",
+  "caller_plan_source": "no_token",
+  "category": "single_cell_analysis",
+  "category_order": "33",
+  "description": "Single-cell perturbation specialist. Handles basic scRNA-only virtual\nKO/KD/OE through scTenifoldKnk, base-GRN perturbation through CellOracle,\nand Plus-tier RegVelo TF regulon blockade with velocity/fate effect\nanalysis.\n\nDoes:\n- select the appropriate perturbation backend from the data state;\n- run `ov.single.perturb` for scTenifoldKnk or CellOracle workflows;\n- infer or load GRN priors before CellOracle or RegVelo when needed;\n- run RegVelo perturbation when velocity-compatible layers and dependencies\n  exist;\n- produce OmicVerse-styled perturbation figures, tables, reports, and\n  reproducible summaries.\n\nDoes NOT:\n- infer GRNs as a standalone endpoint; hand off to single_cell_grn_analyst;\n- run RegVelo on data without velocity-compatible layers;\n- present in-silico perturbation as experimental validation.",
+  "example_prompts": [
+    "Run Gata1 KO with scTenifoldKnk and summarize affected genes.",
+    "Use CellOracle to test whether MEP cells redirect after Gata1 KO.",
+    "Run RegVelo TF blockade for elf1 and quantify fate effects.",
+    "Compare baseline and perturbed velocity effects for these TFs."
+  ],
+  "hash": "63d4df36b6e3f5ee",
+  "icon": "🧪",
+  "id": "single_cell_perturbation_analyst",
+  "locked": true,
+  "name": "Single-cell Perturbation Analyst",
+  "raw_md": "---\nicon: 🧪\nid: single_cell_perturbation_analyst\nname: Single-cell Perturbation Analyst\ntier: pro\ncategory: single_cell_analysis\ncategory_order: 33\nsummary: \"单细胞扰动模拟 —— scTenifoldKnk、CellOracle、RegVelo TF 阻断，下游效应表与 OmicVerse 风格图\"\nuse_when: \"用于单细胞 in-silico KO/KD/OE、scTenifoldKnk、CellOracle、RegVelo TF regulon 阻断、调控扰动、velocity 感知扰动或细胞命运效应分析；只做 GRN 推断用 single_cell_grn_analyst\"\nexample_prompts:\n  - Run Gata1 KO with scTenifoldKnk and summarize affected genes.\n  - Use CellOracle to test whether MEP cells redirect after Gata1 KO.\n  - Run RegVelo TF blockade for elf1 and quantify fate effects.\n  - Compare baseline and perturbed velocity effects for these TFs.\ntoolsets:\n  - file_manager\n  - python_interpreter\n  - shell\n  - omicverse_lookup\n  - skill\n  - team\n  - plan\n  - think\n  - task\n  - memory\nskills:\n  - single-cell-in-silico-perturbation\n  - single-cell-regvelo-perturbation\n  - single-cell-grn-inference\n  - gene-id-conversion\n  - geneset-scoring\n  - gsea-enrichment\n  - single-cell-publication-plots\n  - single-cell-report-authoring\n  - report-html-generation\n  - notebook-export\ndescription: |\n  Single-cell perturbation specialist. Handles basic scRNA-only virtual\n  KO/KD/OE through scTenifoldKnk, base-GRN perturbation through CellOracle,\n  and Plus-tier RegVelo TF regulon blockade with velocity/fate effect\n  analysis.\n\n  Does:\n  - select the appropriate perturbation backend from the data state;\n  - run `ov.single.perturb` for scTenifoldKnk or CellOracle workflows;\n  - infer or load GRN priors before CellOracle or RegVelo when needed;\n  - run RegVelo perturbation when velocity-compatible layers and dependencies\n    exist;\n  - produce OmicVerse-styled perturbation figures, tables, reports, and\n    reproducible summaries.\n\n  Does NOT:\n  - infer GRNs as a standalone endpoint; hand off to single_cell_grn_analyst;\n  - run RegVelo on data without velocity-compatible layers;\n  - present in-silico perturbation as experimental validation.\n---\n\n# Single-cell Perturbation Analyst — locked\n\nThis agent is part of the **pro** subscription tier.\n\nSubscribe at https://app.omicverse.com/#/subscriptions to unlock the full prompt.\n",
+  "required_tier": "pro",
+  "summary": "单细胞扰动模拟 —— scTenifoldKnk、CellOracle、RegVelo TF 阻断，下游效应表与 OmicVerse 风格图",
+  "tier": "pro",
+  "toolsets": [
+    "file_manager",
+    "python_interpreter",
+    "shell",
+    "omicverse_lookup",
+    "skill",
+    "team",
+    "plan",
+    "think",
+    "task",
+    "memory"
+  ],
+  "updated_at": 1781717162,
+  "use_when": "用于单细胞 in-silico KO/KD/OE、scTenifoldKnk、CellOracle、RegVelo TF regulon 阻断、调控扰动、velocity 感知扰动或细胞命运效应分析；只做 GRN 推断用 single_cell_grn_analyst"
+}

@@ -1,0 +1,7 @@
+interface:
+  display_name: "科研入门"
+  short_description: "搭起领域地图，并做出第一个能被检查的科研交付和下一步路线"
+  brand_color: "#2F6B5F"
+  default_prompt: "Use $research-entry to build a field map and define my first concrete research deliverable."
+policy:
+  allow_implicit_invocation: true

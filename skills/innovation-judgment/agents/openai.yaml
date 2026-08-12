@@ -1,0 +1,7 @@
+interface:
+  display_name: "创新性判断"
+  short_description: "判断真正的新意、科学价值、可证明性、竞争窗口与推进价值"
+  brand_color: "#2F6B5F"
+  default_prompt: "Use $innovation-judgment to judge what is truly new, important, and provable in this project."
+policy:
+  allow_implicit_invocation: true

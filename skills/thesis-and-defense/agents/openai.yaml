@@ -1,0 +1,7 @@
+interface:
+  display_name: "毕业论文与答辩"
+  short_description: "把多年工作组织成一条完整的大论文、答辩论证和证据主线"
+  brand_color: "#2F6B5F"
+  default_prompt: "Use $thesis-and-defense to organize my thesis argument and defense around the evidence I actually have."
+policy:
+  allow_implicit_invocation: true

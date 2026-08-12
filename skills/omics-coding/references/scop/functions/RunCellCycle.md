@@ -1,0 +1,82 @@
+# Run cell cycle scoring
+
+- Package: scop
+- Language: R
+- Function: `RunCellCycle`
+- Source: https://mengxu98.github.io/scop/reference/RunCellCycle.html
+- Raw source: https://raw.githubusercontent.com/mengxu98/scop/main/man/RunCellCycle.Rd
+- Fetched at: 2026-08-03T14:16:23+00:00
+
+## Summary
+
+Estimate cell cycle state with Seurat gene-set scoring, {[scran:cyclone]{scran::cyclone()}}, or https://bioconductor.org/packages/tricycle{tricycle}.
+
+## Signature
+
+```text
+RunCellCycle( srt, method = c("Seurat", "cyclone", "tricycle"), assay = NULL, layer = "counts", species = "Homo_sapiens", name = "CellCycle", phase_col = NULL, overwrite = FALSE, verbose = TRUE, ... )
+```
+
+## Parameters
+
+- `srt`: A Seurat object.
+- `method`: Cell cycle estimation method. One of "Seurat", "cyclone", or "tricycle".
+- `assay`: Which assay to use. If NULL, the default assay of the Seurat object will be used. When the object also contains ChromatinAssay, the default assay and additional ChromatinAssay will be preprocessed sequentially.
+- `layer`: Data layer used by cyclone and tricycle. Default is "counts".
+- `species`: Latin names for animals, i.e., "Homo_sapiens", "Mus_musculus"
+- `name`: Prefix for metadata columns and tricycle reduction names. Default is "CellCycle".
+- `phase_col`: Optional metadata column used to store the final phase call, for example "Phase". Default is NULL, which avoids writing a compatibility phase column.
+- `overwrite`: Whether to overwrite existing output columns. Default is FALSE.
+- `verbose`: Whether to print the message. Default is TRUE.
+- `...`: Additional arguments passed to the selected method.
+
+## Full Documentation
+
+# Run cell cycle scoring
+
+## Usage
+
+```text
+RunCellCycle( srt, method = c("Seurat", "cyclone", "tricycle"), assay = NULL, layer = "counts", species = "Homo_sapiens", name = "CellCycle", phase_col = NULL, overwrite = FALSE, verbose = TRUE, ... )
+```
+
+## Description
+
+Estimate cell cycle state with Seurat gene-set scoring, {[scran:cyclone]{scran::cyclone()}}, or https://bioconductor.org/packages/tricycle{tricycle}.
+
+## Value
+
+A Seurat object with cell cycle metadata and, for tricycle, a tricycle embedding reduction.
+
+## Examples
+
+```r
+data(pancreas_sub)
+srt <- pancreas_sub[, 1:80]
+
+srt <- RunCellCycle(
+  srt,
+  method = "cyclone",
+  species = "Mus_musculus",
+  name = "Cyclone"
+)
+
+srt <- RunCellCycle(
+  srt,
+  method = "tricycle",
+  species = "Mus_musculus",
+  name = "Tricycle"
+)
+if ("Cyclone_cyclone_Phase" \%in\% colnames(srt@meta.data)) {
+  CellDimPlot(
+    srt,
+    reduction = "Tricycle_tricycleEmbedding",
+    group.by = "Cyclone_cyclone_Phase"
+  )
+}
+FeatureDimPlot(
+  srt,
+  reduction = "Tricycle_tricycleEmbedding",
+  features = "Tricycle_tricyclePosition"
+)
+```
