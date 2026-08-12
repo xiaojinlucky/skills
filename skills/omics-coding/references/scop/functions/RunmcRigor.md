@@ -1,0 +1,101 @@
+# Run mcRigor metacell partition assessment
+
+- Package: scop
+- Language: R
+- Function: `RunmcRigor`
+- Source: https://mengxu98.github.io/scop/reference/RunmcRigor.html
+- Raw source: https://raw.githubusercontent.com/mengxu98/scop/main/man/RunmcRigor.Rd
+- Fetched at: 2026-08-03T14:16:23+00:00
+
+## Summary
+
+Run mcRigor metacell partition assessment
+
+## Signature
+
+```text
+RunmcRigor( srt, cell_membership = NULL, metacell.by = NULL, mode = c("detect", "optimize"), tgamma = NULL, gamma_names = NULL, assay_type = c("RNA", "ATAC"), Gammas = NULL, aggregate_method = c("mean", "sum", "geom"), output_file = NULL, Nrep = 1, gene_filter = 0.1, feature_use = 2000, cor_method = c("pearson", "spearman"), prePro = TRUE, test_cutoff = 0.01, thre_smooth = TRUE, thre_bw = 1/6, D_bw = 10, optim_method = c("tradeoff", "dub_rate_large", "dub_rate_small"), weight = 0.5, dub_rate = 0.1, draw = FALSE, pur_metric = NULL, check_purity = TRUE, fields = NULL, step_save = FALSE, prefix = "mcRigor", tool_name = "mcRigor", verbose = TRUE )
+```
+
+## Parameters
+
+- `srt`: A Seurat object containing the original single-cell data.
+- `cell_membership`: A data frame or matrix with cells in rows and one or more metacell partitions in columns. Row names should be cell names. If row names are missing and the row count equals ncol(srt), cells are matched in colnames(srt) order.
+- `metacell.by`: Metadata column(s) in srt used as metacell partitions when cell_membership = NULL.
+- `mode`: mcRigor task. "detect" calls mcRigor_DETECT() for one partition; "optimize" calls mcRigor_OPTIMIZE() across candidate partitions.
+- `tgamma`: Target partition/gamma for "detect". Can be a membership column name or the numeric gamma label used by mcRigor. If NULL, the first membership column is used.
+- `gamma_names`: Optional gamma labels for membership columns. mcRigor requires numeric-like column labels; non-numeric labels are mapped internally to 1:ncol(cell_membership) and recorded in the stored result.
+- `assay_type`: Assay type passed to mcRigor.
+- `Gammas`: Candidate gamma labels for "optimize". Can use original membership column names or mapped mcRigor gamma labels.
+- `aggregate_method`: Metacell aggregation method passed to mcRigor.
+- `output_file`: Optional path where mcRigor writes the TabMC RDS file. If NULL, a temporary file is used to avoid creating files in the working directory.
+- `Nrep`: Number of permutation repetitions used by mcRigor.
+- `gene_filter, feature_use, cor_method, prePro, test_cutoff, thre_smooth, thre_bw`: Parameters forwarded to mcRigor.
+- `D_bw, optim_method, weight, dub_rate`: Optimization parameters forwarded to mcRigor_OPTIMIZE().
+- `draw, pur_metric, check_purity, fields, step_save`: Plotting, purity, and intermediate-save parameters forwarded to mcRigor.
+- `prefix`: Prefix for metadata columns written to srt.
+- `tool_name`: Name of the srt@tools entry used to store results.
+- `verbose`: Whether to print the message. Default is TRUE.
+
+## Full Documentation
+
+# Run mcRigor metacell partition assessment
+
+## Usage
+
+```text
+RunmcRigor( srt, cell_membership = NULL, metacell.by = NULL, mode = c("detect", "optimize"), tgamma = NULL, gamma_names = NULL, assay_type = c("RNA", "ATAC"), Gammas = NULL, aggregate_method = c("mean", "sum", "geom"), output_file = NULL, Nrep = 1, gene_filter = 0.1, feature_use = 2000, cor_method = c("pearson", "spearman"), prePro = TRUE, test_cutoff = 0.01, thre_smooth = TRUE, thre_bw = 1/6, D_bw = 10, optim_method = c("tradeoff", "dub_rate_large", "dub_rate_small"), weight = 0.5, dub_rate = 0.1, draw = FALSE, pur_metric = NULL, check_purity = TRUE, fields = NULL, step_save = FALSE, prefix = "mcRigor", tool_name = "mcRigor", verbose = TRUE )
+```
+
+## Description
+
+Run mcRigor metacell partition assessment
+
+## Value
+
+A Seurat object with mcRigor metadata and a result list stored in srt@tools[[tool_name]].
+
+## Examples
+
+```r
+data(pancreas_sub)
+set.seed(11)
+pancreas_sub <- RunStandardWorkflow(
+  pancreas_sub,
+  nHVF = 500,
+  linear_reduction_dims = 20,
+  linear_reduction_dims_use = 1:20,
+  nonlinear_reduction_dims = 2,
+  verbose = FALSE
+)
+mc <- RunMetaCell(
+  pancreas_sub,
+  method = "supercell",
+  gamma = 25
+)
+
+membership <- data.frame(
+  Metacell = mc@misc[["cell_membership"]],
+  row.names = names(mc@misc[["cell_membership"]])
+)
+
+pancreas_sub <- RunmcRigor(
+  mc@misc[["original_srt"]],
+  cell_membership = membership,
+  Nrep = 1,
+  feature_use = 100,
+  draw = FALSE
+)
+
+table(pancreas_sub$mcRigor_status)
+
+CellDimPlot(
+  pancreas_sub,
+  group.by = "mcRigor_metacell"
+)
+
+CellDimPlot(
+  pancreas_sub,
+  group.by = "mcRigor_status"
+)
+```

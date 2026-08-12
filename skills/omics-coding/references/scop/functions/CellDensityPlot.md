@@ -1,0 +1,98 @@
+# Cell density plot
+
+- Package: scop
+- Language: R
+- Function: `CellDensityPlot`
+- Source: https://mengxu98.github.io/scop/reference/CellDensityPlot.html
+- Raw source: https://raw.githubusercontent.com/mengxu98/scop/main/man/CellDensityPlot.Rd
+- Fetched at: 2026-08-03T14:16:23+00:00
+
+## Summary
+
+Plots the density of specified features in a single or multiple groups, grouped by specified variables.
+
+## Signature
+
+```text
+CellDensityPlot( srt, features, group.by = NULL, split.by = NULL, assay = NULL, layer = "data", flip = FALSE, reverse = FALSE, x_order = c("value", "rank"), decreasing = NULL, palette = "Chinese", palcolor = NULL, cells = NULL, keep_empty = FALSE, y.nbreaks = 4, y.min = NULL, y.max = NULL, same.y.lims = FALSE, aspect.ratio = NULL, title = NULL, subtitle = NULL, legend.position = "right", legend.direction = "vertical", theme_use = "theme_scop", theme_args = list(), combine = TRUE, nrow = NULL, ncol = NULL, byrow = TRUE, force = FALSE, verbose = TRUE )
+```
+
+## Parameters
+
+- `srt`: A Seurat object.
+- `features`: A character vector of features to use.
+- `group.by`: Name of one or more meta.data columns to group (color) cells by.
+- `split.by`: Name of a column in meta.data column to split plot by. Default is NULL.
+- `assay`: Which assay to use. If NULL, the default assay of the Seurat object will be used. When the object also contains ChromatinAssay, the default assay and additional ChromatinAssay will be preprocessed sequentially.
+- `layer`: Which layer to use. Default is data.
+- `flip`: Whether to flip the x-axis. Default is FALSE.
+- `reverse`: Whether to reverse the y-axis. Default is FALSE.
+- `x_order`: A character specifying how to order the x-axis. Can be "value" or "rank". Default is "value".
+- `decreasing`: Whether to order the groups in decreasing order. Default is NULL.
+- `palette`: Color palette name. Available palettes can be found in [thisplot:show_palettes]{thisplot::show_palettes}. Default is "Chinese".
+- `palcolor`: Custom colors used to create a color palette. Default is NULL.
+- `cells`: A character vector of cell names to use. Default is NULL, which means all cells are included.
+- `keep_empty`: Whether to keep empty groups. Default is FALSE.
+- `y.nbreaks`: A number of breaks on the y-axis. Default is 4.
+- `y.min`: A numeric specifying the minimum value on the y-axis. Default is NULL, which means the minimum value will be automatically determined.
+- `y.max`: A numeric specifying the maximum value on the y-axis. Default is NULL, which means the maximum value will be automatically determined.
+- `same.y.lims`: Whether to use the same y-axis limits for all plots. Default is FALSE.
+- `aspect.ratio`: Aspect ratio of the panel. Default is NULL.
+- `title`: The text for the title. Default is NULL.
+- `subtitle`: The text for the subtitle for the plot which will be displayed below the title. Default is NULL.
+- `legend.position`: The position of legends, one of "none", "left", "right", "bottom", "top". Default is "right".
+- `legend.direction`: The direction of the legend in the plot. Can be one of "vertical" or "horizontal".
+- `theme_use`: Theme used. Can be a character string or a theme function. Default is "theme_scop".
+- `theme_args`: Other arguments passed to the theme_use. Default is list().
+- `combine`: Combine plots into a single patchwork object. If FALSE, return a list of ggplot objects.
+- `nrow`: Number of rows in the combined plot. Default is NULL, which means determined automatically based on the number of plots.
+- `ncol`: Number of columns in the combined plot. Default is NULL, which means determined automatically based on the number of plots.
+- `byrow`: Whether to arrange the plots by row in the combined plot. Default is TRUE.
+- `force`: Whether to continue plotting if there are more than 50 features. Default is FALSE.
+- `verbose`: Whether to print the message. Default is TRUE.
+
+## Full Documentation
+
+# Cell density plot
+
+## Usage
+
+```text
+CellDensityPlot( srt, features, group.by = NULL, split.by = NULL, assay = NULL, layer = "data", flip = FALSE, reverse = FALSE, x_order = c("value", "rank"), decreasing = NULL, palette = "Chinese", palcolor = NULL, cells = NULL, keep_empty = FALSE, y.nbreaks = 4, y.min = NULL, y.max = NULL, same.y.lims = FALSE, aspect.ratio = NULL, title = NULL, subtitle = NULL, legend.position = "right", legend.direction = "vertical", theme_use = "theme_scop", theme_args = list(), combine = TRUE, nrow = NULL, ncol = NULL, byrow = TRUE, force = FALSE, verbose = TRUE )
+```
+
+## Description
+
+Plots the density of specified features in a single or multiple groups, grouped by specified variables.
+
+## Examples
+
+```r
+data(pancreas_sub)
+pancreas_sub <- RunStandardWorkflow(pancreas_sub)
+CellDensityPlot(
+  pancreas_sub,
+  features = "Sox9",
+  group.by = "SubCellType"
+)
+
+pancreas_sub <- RunSlingshot(
+  pancreas_sub,
+  group.by = "SubCellType",
+  reduction = "UMAP"
+)
+
+CellDensityPlot(
+  pancreas_sub,
+  features = "Lineage1",
+  group.by = "SubCellType",
+  aspect.ratio = 1
+)
+
+CellDensityPlot(
+  pancreas_sub,
+  features = "Lineage1",
+  group.by = "SubCellType",
+  flip = TRUE
+)
+```

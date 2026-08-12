@@ -1,0 +1,82 @@
+# DEtest Ring Plot
+
+- Package: scop
+- Language: R
+- Function: `DEtestRingPlot`
+- Source: https://mengxu98.github.io/scop/reference/DEtestRingPlot.html
+- Raw source: https://raw.githubusercontent.com/mengxu98/scop/main/man/DEtestRingPlot.Rd
+- Fetched at: 2026-08-03T14:16:23+00:00
+
+## Summary
+
+Draw a circular (ring) plot of differential expression results by cell type.
+
+## Signature
+
+```text
+DEtestRingPlot( srt, group.by = NULL, test.use = "wilcox", res = NULL, group_use = NULL, DE_threshold = "avg_log2FC > 0 & p_val_adj < 0.05", group_palette = "Chinese", group_palcolor = NULL, pt.size = 1, pt.alpha = 1, cols.highlight = "black", sizes.highlight = 1, alpha.highlight = 1, stroke.highlight = 0.5, nlabel = 5, features_label = NULL, only.pos = FALSE, label.by = c("p_val_adj", "p_val", "diff_pct", "avg_log2FC"), label.fg = "black", label.bg = "white", label.bg.r = 0.1, label.size = 4, palette = "RdBu", palcolor = NULL, theme_use = "theme_scop", theme_args = list(), tile_height = 0.3, tile_gap = 0.1, jitter_width = 0.5, ring_segments = TRUE, seed = 11 )
+```
+
+## Parameters
+
+- `srt`: A Seurat object or SummarizedExperiment object containing the results of differential expression analysis.
+- `group.by`: Name of one or more meta.data columns to group (color) cells by.
+- `test.use`: A character string specifying the type of statistical test to use. Default is "wilcox".
+- `res`: A data.frame or data.table with differential expression results. When res is provided, srt will be ignored. The data.frame must contain columns: gene, group1 (factor or character), avg_log2FC, p_val_adj, and optionally pct.1 and pct.2 for calculating diff_pct.
+- `group_use`: Groups to plot. Default is NULL (all groups).
+- `DE_threshold`: A character string specifying the threshold for differential expression (used to highlight significant genes in all plot types). Default is "p_val < 0.05" for sample-level methods ("edgeR" and "limma"). For cell-level volcano plots, it is "abs(avg_log2FC) > 0 & p_val_adj < 0.05" when only.pos = FALSE, and "avg_log2FC > 0 & p_val_adj < 0.05" otherwise.
+- `group_palette`: Palette for cell types (groups) in Manhattan plot. Default is "Chinese".
+- `group_palcolor`: Custom colors for cell types (groups) in Manhattan plot. Default is NULL.
+- `pt.size`: The size of the points. Default is 1.
+- `pt.alpha`: The transparency of the data points. Default is 1.
+- `cols.highlight`: A character string specifying the color for highlighted points. Default is "black".
+- `sizes.highlight`: The size of the highlighted points. Default is 1.
+- `alpha.highlight`: The transparency of the highlighted points. Default is 1.
+- `stroke.highlight`: The stroke width for the highlighted points. Default is 0.5.
+- `nlabel`: An integer value specifying the number of labeled points per group. Default is 5.
+- `features_label`: A character vector specifying the feature labels to plot. Default is NULL.
+- `only.pos`: Whether to show only positive log2 fold-change results in differential expression visualizations. Default is FALSE.
+- `label.by`: Metric used to select automatic labels when features_label = NULL. Options are "p_val_adj", "p_val", "diff_pct", and "avg_log2FC". Smaller p-values are ranked first; diff_pct and avg_log2FC use the strongest positive and negative effects within each group. Default is "p_val_adj".
+- `label.fg`: A character string specifying the color for the labels' foreground. Default is "black".
+- `label.bg`: A character string specifying the color for the labels' background. Default is "white".
+- `label.bg.r`: The radius of the rounding of the labels' background. Default is 0.1.
+- `label.size`: The size of the labels. Default is 4.
+- `palette`: Color palette name. Available palettes can be found in [thisplot:show_palettes]{thisplot::show_palettes}. Default is "RdBu".
+- `palcolor`: Custom colors used to create a color palette. Default is NULL.
+- `theme_use`: Theme used. Can be a character string or a theme function. Default is "theme_scop".
+- `theme_args`: Other arguments passed to the theme_use. Default is list().
+- `tile_height`: Height of the cell-type track in ring plot. Default is 0.3.
+- `tile_gap`: Gap between the track and nudged points in ring plot. Default is 0.1.
+- `jitter_width`: Horizontal jitter range for points in Manhattan plot. Default is 0.5.
+- `ring_segments`: Whether to draw segment lines between cell types in ring plot. Default is TRUE.
+- `seed`: Random seed for jitter in Manhattan and ring plots. Default is 11.
+
+## Full Documentation
+
+# DEtest Ring Plot
+
+## Usage
+
+```text
+DEtestRingPlot( srt, group.by = NULL, test.use = "wilcox", res = NULL, group_use = NULL, DE_threshold = "avg_log2FC > 0 & p_val_adj < 0.05", group_palette = "Chinese", group_palcolor = NULL, pt.size = 1, pt.alpha = 1, cols.highlight = "black", sizes.highlight = 1, alpha.highlight = 1, stroke.highlight = 0.5, nlabel = 5, features_label = NULL, only.pos = FALSE, label.by = c("p_val_adj", "p_val", "diff_pct", "avg_log2FC"), label.fg = "black", label.bg = "white", label.bg.r = 0.1, label.size = 4, palette = "RdBu", palcolor = NULL, theme_use = "theme_scop", theme_args = list(), tile_height = 0.3, tile_gap = 0.1, jitter_width = 0.5, ring_segments = TRUE, seed = 11 )
+```
+
+## Description
+
+Draw a circular (ring) plot of differential expression results by cell type.
+
+## Examples
+
+```r
+data(pancreas_sub)
+pancreas_sub <- RunStandardWorkflow(pancreas_sub)
+pancreas_sub <- RunDEtest(
+  pancreas_sub,
+  group.by = "CellType",
+  only.pos = FALSE
+)
+DEtestRingPlot(
+  pancreas_sub,
+  group.by = "CellType"
+)
+```

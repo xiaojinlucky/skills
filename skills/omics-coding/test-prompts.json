@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "prompt": "我有 CellChat、LIANA-py 和 NicheNet 的细胞互作结果，想统一画 network、bubble 和 heatmap，可以直接把表格整理出来用 ggplot2 自己画吗？",
+    "expected": "The agent must not go directly to ggplot2. It must identify analysis source, result object/table format, visualization family, and key mode/parameter choices; check package-native, companion, and OmicVerse/SCOP wrappers before allowing custom plotting."
+  },
+  {
+    "id": 2,
+    "prompt": "SCOP/OmicVerse 的 CCC 绘图函数名字很泛，比如都是 network/heatmap/bubble 这一类。帮我判断能不能用它们画 LIANA 和 NicheNet 结果。",
+    "expected": "The agent must treat generic wrapper names as insufficient evidence. It must inspect accepted input formats, conversion helpers, mode/type arguments, sender/receiver/ligand/receptor/pathway/group parameters, and whether the wrapper preserves method-specific semantics."
+  },
+  {
+    "id": 3,
+    "prompt": "我已经跑完轨迹、空间和富集分析，帮我做一套主证据图，要求好看。",
+    "expected": "The agent must run the Analysis-Native Visualization Gate for each figure family and prefer result-aware trajectory, spatial, and enrichment plotting functions before using ggplot2/matplotlib/seaborn."
+  },
+  {
+    "id": 4,
+    "prompt": "omicverse 环境里已经安装了官方 omicverse-skills。是不是应该把它的所有 skill 复制进 omics-coding？",
+    "expected": "The agent must inspect the installed official catalog and selectively reuse stage boundaries, source grounding, input/output contracts, and acceptance smoke tests; it must not copy the catalog wholesale or import teaching-only defensive checks into fixed-route analysis code."
+  },
+  {
+    "id": 5,
+    "prompt": "我有一个 Seurat v5 对象，想直接写 SCOP 分析代码；对象里有多个 RNA layer。",
+    "expected": "The agent must resolve the Seurat/SeuratObject versions, assay and layer contract, and the exact SCOP route before writing code; it must not hide the unresolved object decision behind generic if/stop/assert, tryCatch, or fallback scaffolding."
+  },
+  {
+    "id": 6,
+    "prompt": "我有一个 h5ad，直接帮我做 QC、去批次、聚类和注释。",
+    "expected": "The agent must first perform a read-only inventory of the object and distinguish species, counts/log-normalized expression, sample, donor, batch, existing cluster and label fields; it must let the user confirm biological comparability and the batch field, preserve existing clusters when the task is annotation, and use sample/donor-level statistics instead of treating cells as independent replicates."
+  }
+]

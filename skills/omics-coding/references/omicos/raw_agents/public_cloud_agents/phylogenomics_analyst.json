@@ -1,0 +1,39 @@
+{
+  "body": "# Phylogenomics Analyst — locked\n\nThis agent is part of the **plus** subscription tier.\n\nSubscribe at https://app.omicverse.com/#/subscriptions to unlock the full prompt.\n",
+  "caller_plan_source": "no_token",
+  "category": "phylogenomics",
+  "category_order": "50",
+  "description": "Phylogenetics and phylogenomics specialist — alignment-quality scoring, tree-shape metrics, gene-gene covariation (mirror tree), polytomy testing for rapid radiations, and MSA accuracy benchmarking — all driven by PhyKIT.",
+  "example_prompts": [
+    "帮我看一下这份 MSA 的 parsimony informative sites 占比",
+    "评估这棵 gene tree 有没有 long-branch attraction 问题",
+    "我有 250 棵 gene tree，想检测这两个分支之间是否是 polytomy",
+    "这三个基因里哪两个 covary？用 mirror tree 方法判断",
+    "对比 mafft 的 localpair / genafpair / globalpair 三种 alignment 哪个最准（有 reference）",
+    "为什么这棵树的 LB score 标准差这么高？是哪个 taxon 拖的？",
+    "subsampling 100 个 best-scoring genes 用来重建物种树，怎么打分排序？"
+  ],
+  "hash": "f2be642c9a99583b",
+  "id": "phylogenomics_analyst",
+  "locked": true,
+  "name": "Phylogenomics Analyst",
+  "raw_md": "---\nid: phylogenomics_analyst\nname: Phylogenomics Analyst\ndescription: Phylogenetics and phylogenomics specialist — alignment-quality scoring, tree-shape metrics, gene-gene covariation (mirror tree), polytomy testing for rapid radiations, and MSA accuracy benchmarking — all driven by PhyKIT.\ntier: plus\ntoolsets:\n  - file_manager\n  - python_interpreter\n  - shell\n  - notebook\n  - omicverse_lookup\n  - team\n  - plan\n  - think\n  - task\n  - skill\n  - memory\nskills:\n  - phykit-alignment-quality\n  - phykit-tree-quality\n  - phykit-gene-tree-discordance\n  - phykit-trait-history\n  - phykit-phylogenetic-signal\n  - phykit-trait-ordination\n  - phykit-phylogenetic-regression\n  - phykit-trait-evolution-models\n  - phykit-phylo-visualization\ncategory: phylogenomics\ncategory_order: 50\nsummary: 多序列比对与系统发生树的质量评估、共变与多歧分析，全部用 PhyKIT 落地。\nuse_when: 用户提到 multiple sequence alignment / 系统发生树 / phylogeny / phylogenomics / gene tree / species tree / polytomy / rapid radiation / mirror tree / treeness / RCV / LB score / parsimony informative sites / 饱和度 / saturation / MSA 准确性 / sum-of-pairs / column score。或者用户上传了 `.fa` / `.fasta` / `.aln.fa` / `.tre` / `.treefile` / `.newick` 文件请求分析。\nexample_prompts:\n  - \"帮我看一下这份 MSA 的 parsimony informative sites 占比\"\n  - \"评估这棵 gene tree 有没有 long-branch attraction 问题\"\n  - \"我有 250 棵 gene tree，想检测这两个分支之间是否是 polytomy\"\n  - \"这三个基因里哪两个 covary？用 mirror tree 方法判断\"\n  - \"对比 mafft 的 localpair / genafpair / globalpair 三种 alignment 哪个最准（有 reference）\"\n  - \"为什么这棵树的 LB score 标准差这么高？是哪个 taxon 拖的？\"\n  - \"subsampling 100 个 best-scoring genes 用来重建物种树，怎么打分排序？\"\n---\n\n# Phylogenomics Analyst — locked\n\nThis agent is part of the **plus** subscription tier.\n\nSubscribe at https://app.omicverse.com/#/subscriptions to unlock the full prompt.\n",
+  "required_tier": "plus",
+  "summary": "多序列比对与系统发生树的质量评估、共变与多歧分析，全部用 PhyKIT 落地。",
+  "tier": "plus",
+  "toolsets": [
+    "file_manager",
+    "python_interpreter",
+    "shell",
+    "notebook",
+    "omicverse_lookup",
+    "team",
+    "plan",
+    "think",
+    "task",
+    "skill",
+    "memory"
+  ],
+  "updated_at": 1780537428,
+  "use_when": "用户提到 multiple sequence alignment / 系统发生树 / phylogeny / phylogenomics / gene tree / species tree / polytomy / rapid radiation / mirror tree / treeness / RCV / LB score / parsimony informative sites / 饱和度 / saturation / MSA 准确性 / sum-of-pairs / column score。或者用户上传了 `.fa` / `.fasta` / `.aln.fa` / `.tre` / `.treefile` / `.newick` 文件请求分析。"
+}

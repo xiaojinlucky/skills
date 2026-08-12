@@ -1,0 +1,35 @@
+{
+  "body": "# CellChat Rust H5AD Runner — locked\n\nThis agent is part of the **lab** subscription tier.\n\nSubscribe at https://app.omicverse.com/#/subscriptions to unlock the full prompt.\n",
+  "caller_plan_source": "no_token",
+  "category": "single_cell_analysis",
+  "category_order": "30",
+  "description": "Cell-cell / ligand-receptor communication analysis for single-cell RNA-seq via two routes — LIANA (Python, ov.single.run_liana, consensus + permutation test) and the phase-first CellChat Rust H5AD workflow (R / cellchatr). Accepts an annotated h5ad directly, or raw / unannotated data by delegating preprocessing and cell-type annotation first.",
+  "example_prompts": [
+    "Which ligand-receptor pairs mediate communication between two cell types in this scRNA-seq data?",
+    "Infer cell-cell communication with LIANA from these raw count matrices.",
+    "Run the CellChat h5ad workflow from this run_config.json.",
+    "Execute phase 02 for my CellChat Rust H5AD run and report backend fallback status.",
+    "Inspect why the previous CellChat phase wrote phase_failed.json."
+  ],
+  "hash": "c5a4c4c045303206",
+  "id": "cellchat_rust_h5ad_runner",
+  "locked": true,
+  "name": "CellChat Rust H5AD Runner",
+  "raw_md": "---\nid: cellchat_rust_h5ad_runner\nname: CellChat Rust H5AD Runner\ndescription: Cell-cell / ligand-receptor communication analysis for single-cell RNA-seq via two routes — LIANA (Python, ov.single.run_liana, consensus + permutation test) and the phase-first CellChat Rust H5AD workflow (R / cellchatr). Accepts an annotated h5ad directly, or raw / unannotated data by delegating preprocessing and cell-type annotation first.\ntier: lab\ntoolsets:\n  - file_manager\n  - python_interpreter\n  - shell\n  - plan\n  - think\n  - task\n  - skill\n  - memory\n  - team\nskills:\n  - cell-cell-communication\n  - cellchat_rust_h5ad\ncategory: single_cell_analysis\ncategory_order: 30\nsummary: Cell-cell communication —— LIANA (Python) 或 CellChat (R) 配体-受体推断;原始/未注释数据先委派预处理+注释。\nuse_when: Use for cell-cell / ligand-receptor communication analysis on single-cell RNA-seq — LIANA (Python, ov.single.run_liana, consensus + permutation test) or CellChat (R) inference, directed sender→receiver questions, signaling-pathway ranking, condition comparison, and differential interaction plots. Accepts an annotated h5ad directly, or raw / unannotated scRNA-seq (text matrices, mtx, unlabeled h5ad) by delegating preprocessing and cell-type annotation to the appropriate specialists first.\nexample_prompts:\n  - Which ligand-receptor pairs mediate communication between two cell types in this scRNA-seq data?\n  - Infer cell-cell communication with LIANA from these raw count matrices.\n  - Run the CellChat h5ad workflow from this run_config.json.\n  - Execute phase 02 for my CellChat Rust H5AD run and report backend fallback status.\n  - Inspect why the previous CellChat phase wrote phase_failed.json.\n---\n\n# CellChat Rust H5AD Runner — locked\n\nThis agent is part of the **lab** subscription tier.\n\nSubscribe at https://app.omicverse.com/#/subscriptions to unlock the full prompt.\n",
+  "required_tier": "lab",
+  "summary": "Cell-cell communication —— LIANA (Python) 或 CellChat (R) 配体-受体推断;原始/未注释数据先委派预处理+注释。",
+  "tier": "lab",
+  "toolsets": [
+    "file_manager",
+    "python_interpreter",
+    "shell",
+    "plan",
+    "think",
+    "task",
+    "skill",
+    "memory",
+    "team"
+  ],
+  "updated_at": 1779359878,
+  "use_when": "Use for cell-cell / ligand-receptor communication analysis on single-cell RNA-seq — LIANA (Python, ov.single.run_liana, consensus + permutation test) or CellChat (R) inference, directed sender→receiver questions, signaling-pathway ranking, condition comparison, and differential interaction plots. Accepts an annotated h5ad directly, or raw / unannotated scRNA-seq (text matrices, mtx, unlabeled h5ad) by delegating preprocessing and cell-type annotation to the appropriate specialists first."
+}

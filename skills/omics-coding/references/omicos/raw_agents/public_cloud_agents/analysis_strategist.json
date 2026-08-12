@@ -1,0 +1,36 @@
+{
+  "body": "# Analysis Strategist — locked\n\nThis agent is part of the **pro** subscription tier.\n\nSubscribe at https://app.omicverse.com/#/subscriptions to unlock the full prompt.\n",
+  "caller_plan_source": "no_token",
+  "category": "orchestration",
+  "category_order": "1",
+  "description": "Meta-orchestrator that designs cross-modality, multi-stage analysis\nstrategies from a fresh dataset and a scientific question. Surveys\nthe full OmicVerse registry (`registry_lookup`), the full skill\nlibrary (`skill_resource` over the skills index), and the full team\nroster (`agent_select`/`list_agents`), then composes 2–3 strategy\noptions — ranking each by novelty, scientific yield, and risk —\nbefore handing off stage-by-stage to specialist agents.\n\nThis agent **does not run analysis itself**. Its deliverable is a\nwritten strategy document (`outputs/<run>/strategy.md` +\n`strategy.json`) and the first plan-mode hand-off. Pipeline execution\nis delegated stage-by-stage to specialist agents (`single_cell_*`,\n`spatial_omics_orchestrator`, `bulk_rna_analyst`, …) via `call_agent`.\n\nUse this agent when the user wants to think creatively about an\nuncommon combination — *not* when they already know which standard\npipeline to run. For \"just preprocess this scRNA\", route to\n`single_cell_preprocessor`; for \"annotate this Visium\", route to\n`spatial_omics_orchestrator`. The strategist's value is in cross-\nmodality composition: e.g. scRNA + `single-cell-metabolism-inference`\n+ `single-cell-trajectory-inference` joined on the cell axis to see\nmetabolic flux **along** a pseudotime, or scATAC peak-to-gene linked\nto scRNA pseudotime to read out enhancer dynamics over differentiation.\n\nTier is `pro` because most non-trivial strategies it composes\nrequire pro-tier skills (STAGATE / scFEA / Compass / GraphST /\nin-silico perturbation). Free users will still see the strategy\ndocument but may be blocked at execution time on individual stages —\nthat's expected and surfaced in the per-stage handoff notes.",
+  "example_prompts": [
+    "拿到一份治疗前后配对的 scRNA-seq + bulk 代谢组,想看治疗反应的代谢动态 —— 你觉得怎么组合分析?",
+    "Visium 切片 + 配对的同源 scRNA,问\"哪些代谢通路在肿瘤边界激活\" —— 设计一套能回答这个问题的策略",
+    "病人队列有 RNA-seq + WES + 临床随访,任务是找一个新的预后亚型,常规 DE+Cox 之外还能怎么做?",
+    "scRNA + scATAC 来自同一批 PBMC,想理解 B 细胞激活的染色质动力学,组合一套跨阶段方案",
+    "我这份数据是 H&E 全切片图,后面没有空间组学;能玩出什么?"
+  ],
+  "hash": "a6bcf81765db3acc",
+  "icon": "🧭",
+  "id": "analysis_strategist",
+  "locked": true,
+  "name": "Analysis Strategist",
+  "raw_md": "---\nicon: 🧭\nid: analysis_strategist\nname: Analysis Strategist\ntier: pro\ncategory: orchestration\n# Orchestration row sits at the top of the SPA's agents page.\n# omicverse_omni and vertical_agent_selector both use 0; the strategist\n# is a heavier meta-orchestrator (drafts multi-stage cross-modality\n# plans before any execution) and sits one slot below them.\ncategory_order: 1\nsummary: 跨模态分析策略架构师 —— 给定一份新数据 + 一个科学问题，遍历 OmicVerse 全函数表与全部 skill / specialist agent，组合出一个能回答该问题的、可能非传统的多阶段分析方案,再交给专科 agent 逐段执行\nuse_when: 拿到一份(或多份)新数据,想问\"这份数据能回答什么 / 怎么分析才最有信息量\",并且愿意接受非传统的、跨阶段拼装的分析路线 —— 例如 scRNA + 代谢通量 + 拟时序联合,scATAC + scRNA + peak-to-gene + 谱系演化,bulk + 微生物 + 配对代谢联合,空间 + 反卷积 + 邻接细胞通讯。不是已经知道要跑什么管线了 —— 那种走对应专科 agent;这里专门处理\"该跑什么\"。\nexample_prompts:\n  - \"拿到一份治疗前后配对的 scRNA-seq + bulk 代谢组,想看治疗反应的代谢动态 —— 你觉得怎么组合分析?\"\n  - 'Visium 切片 + 配对的同源 scRNA,问\"哪些代谢通路在肿瘤边界激活\" —— 设计一套能回答这个问题的策略'\n  - \"病人队列有 RNA-seq + WES + 临床随访,任务是找一个新的预后亚型,常规 DE+Cox 之外还能怎么做?\"\n  - \"scRNA + scATAC 来自同一批 PBMC,想理解 B 细胞激活的染色质动力学,组合一套跨阶段方案\"\n  - \"我这份数据是 H&E 全切片图,后面没有空间组学;能玩出什么?\"\nexample_inputs:\n  - input: \"data/treat_vs_ctrl/scRNA.h5ad(已注释)+ data/treat_vs_ctrl/metabol_long.csv(配对 LC-MS),想看治疗诱导的代谢-细胞类型耦合\"\n    output: \"strategy.md(三策略对比 + 推荐方案 + 阶段委托表)+ strategy.json(机读)+ 第一段委托给 single_cell_preprocessor 的 plan\"\ntoolsets:\n  - file_manager\n  - python_interpreter\n  - omicverse_lookup\n  - skill\n  - team\n  - plan\n  - think\n  - task\n  - memory\ndescription: |\n  Meta-orchestrator that designs cross-modality, multi-stage analysis\n  strategies from a fresh dataset and a scientific question. Surveys\n  the full OmicVerse registry (`registry_lookup`), the full skill\n  library (`skill_resource` over the skills index), and the full team\n  roster (`agent_select`/`list_agents`), then composes 2–3 strategy\n  options — ranking each by novelty, scientific yield, and risk —\n  before handing off stage-by-stage to specialist agents.\n\n  This agent **does not run analysis itself**. Its deliverable is a\n  written strategy document (`outputs/<run>/strategy.md` +\n  `strategy.json`) and the first plan-mode hand-off. Pipeline execution\n  is delegated stage-by-stage to specialist agents (`single_cell_*`,\n  `spatial_omics_orchestrator`, `bulk_rna_analyst`, …) via `call_agent`.\n\n  Use this agent when the user wants to think creatively about an\n  uncommon combination — *not* when they already know which standard\n  pipeline to run. For \"just preprocess this scRNA\", route to\n  `single_cell_preprocessor`; for \"annotate this Visium\", route to\n  `spatial_omics_orchestrator`. The strategist's value is in cross-\n  modality composition: e.g. scRNA + `single-cell-metabolism-inference`\n  + `single-cell-trajectory-inference` joined on the cell axis to see\n  metabolic flux **along** a pseudotime, or scATAC peak-to-gene linked\n  to scRNA pseudotime to read out enhancer dynamics over differentiation.\n\n  Tier is `pro` because most non-trivial strategies it composes\n  require pro-tier skills (STAGATE / scFEA / Compass / GraphST /\n  in-silico perturbation). Free users will still see the strategy\n  document but may be blocked at execution time on individual stages —\n  that's expected and surfaced in the per-stage handoff notes.\n---\n\n# Analysis Strategist — locked\n\nThis agent is part of the **pro** subscription tier.\n\nSubscribe at https://app.omicverse.com/#/subscriptions to unlock the full prompt.\n",
+  "required_tier": "pro",
+  "summary": "跨模态分析策略架构师 —— 给定一份新数据 + 一个科学问题，遍历 OmicVerse 全函数表与全部 skill / specialist agent，组合出一个能回答该问题的、可能非传统的多阶段分析方案,再交给专科 agent 逐段执行",
+  "tier": "pro",
+  "toolsets": [
+    "file_manager",
+    "python_interpreter",
+    "omicverse_lookup",
+    "skill",
+    "team",
+    "plan",
+    "think",
+    "task",
+    "memory"
+  ],
+  "updated_at": 1780491616,
+  "use_when": "拿到一份(或多份)新数据,想问\"这份数据能回答什么 / 怎么分析才最有信息量\",并且愿意接受非传统的、跨阶段拼装的分析路线 —— 例如 scRNA + 代谢通量 + 拟时序联合,scATAC + scRNA + peak-to-gene + 谱系演化,bulk + 微生物 + 配对代谢联合,空间 + 反卷积 + 邻接细胞通讯。不是已经知道要跑什么管线了 —— 那种走对应专科 agent;这里专门处理\"该跑什么\"。"
+}

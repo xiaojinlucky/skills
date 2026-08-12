@@ -1,0 +1,34 @@
+{
+  "body": "# Single-cell Annotator Pro — locked\n\nThis agent is part of the **pro** subscription tier.\n\nSubscribe at https://app.omicverse.com/#/subscriptions to unlock the full prompt.\n",
+  "caller_plan_source": "no_token",
+  "category": "single_cell_analysis",
+  "category_order": "2",
+  "description": "Evidence-based single-cell cell-type annotation specialist (Pro tier).\nTakes a clustered AnnData and produces literature-grounded cell-type\nlabels with PubMed sentence-level evidence. The atlas (890k cell-type\n↔ marker statements mined from ~300k PMC full-text articles,\nstandardised against Uberon / Cell Ontology / Disease Ontology) lives\non omicos-server and is gated to Pro plans; the agent calls\n/api/markers/score with each cluster's top DE genes and receives\nranked candidates + evidence.\n\nPro tier because the evidence-driven approach is the agent's\ndifferentiator: cell types come with traceable PMIDs in their\noriginal biological context, including negative-marker conflicts and\ndisease-specific marker pools. Community-tier annotation tools\n(PanglaoDB / CellMarker static lists, GPTCellType prompts) cannot\nmatch this audit trail.\n\nPipeline:\n  1. Verify input AnnData has cluster labels (leiden / louvain).\n  2. Extract per-cluster top DE markers via scanpy rank_genes_groups.\n  3. POST each cluster's marker list to /api/markers/score with the\n     user-supplied (species, tissue, disease?) context.\n  4. For each cluster, the agent's own session re-ranks against the\n     returned candidates — apply biological-plausibility rules,\n     prefer specific over generic, respect negative-marker rejects.\n  5. Write final labels back to adata.obs and produce an audit table\n     with overlap details + PMID evidence.\n\nDoes NOT do preprocessing (`single_cell_preprocessor` produces the\ninput clustered AnnData), does NOT do trajectory analysis, does NOT\ndo cell-cell communication, does NOT write the manuscript prose\n(`scientific_writer` reads the audit table as input).",
+  "example_prompts": [
+    "outputs/clustered.h5ad 给 PBMC，按 leiden 注释，species=Human, tissue=blood",
+    "这是 glioblastoma 样本的 .h5ad，按 disease=glioblastoma 过滤注释",
+    "Mouse brain Visium 切片，注释每个 spot cluster",
+    "我的 cluster 7 top markers 是 CD8A, GZMK, PRF1 —— 这是什么细胞？"
+  ],
+  "hash": "16e00d5e0d6ca073",
+  "icon": "🧬",
+  "id": "single_cell_annotator_pro",
+  "locked": true,
+  "name": "Single-cell Annotator Pro",
+  "raw_md": "---\nicon: 🧬\nid: single_cell_annotator_pro\nname: Single-cell Annotator Pro\ntier: pro\ncategory: single_cell_analysis\ncategory_order: 2\nsummary: 文献证据 cell-type 注释 —— OmicosAnno 89 万条标注 + signed-template 评分 + 本会话 LLM 生物学仲裁 + PubMed 句子级证据\nuse_when: 拿到已聚类的 AnnData (`scmarker_preprocessor` 输出 / 任何带 `leiden`/`louvain` 的 .h5ad)，要给每个 cluster 标 cell type，并要可审计的文献证据\nexample_prompts:\n  - \"outputs/clustered.h5ad 给 PBMC，按 leiden 注释，species=Human, tissue=blood\"\n  - \"这是 glioblastoma 样本的 .h5ad，按 disease=glioblastoma 过滤注释\"\n  - \"Mouse brain Visium 切片，注释每个 spot cluster\"\n  - \"我的 cluster 7 top markers 是 CD8A, GZMK, PRF1 —— 这是什么细胞？\"\nexample_inputs:\n  - input: \"已 cluster 的 .h5ad + (species, tissue, disease?)\"\n    output: \"adata.obs['celltype_anno_ov'] + celltype_anno_ov_annotations.csv + figures/umap_celltype_anno_ov.png + REPORT.html + 每个 cluster 的 top-5 候选 + PubMed PMIDs\"\ntoolsets:\n  - file_manager\n  - python_interpreter\n  - omicverse_lookup\n  - plan\n  - think\n  - task\n  - skill\n  - memory\nskills:\n  - celltype-annotation-pro\n  - single-cell-preprocessing\n  - gene-id-conversion\n  - single-cell-composition\n  - single-cell-publication-plots\n  - single-cell-report-authoring\n  - report-html-generation\n  - office-tools\n  - notebook-export\nprovides:\n  - cell_type_annotation\ndoes_not_own:\n  - preprocessing\n  - trajectory_inference\n  - cell_cell_communication\n  - manuscript_writing\ndescription: |\n  Evidence-based single-cell cell-type annotation specialist (Pro tier).\n  Takes a clustered AnnData and produces literature-grounded cell-type\n  labels with PubMed sentence-level evidence. The atlas (890k cell-type\n  ↔ marker statements mined from ~300k PMC full-text articles,\n  standardised against Uberon / Cell Ontology / Disease Ontology) lives\n  on omicos-server and is gated to Pro plans; the agent calls\n  /api/markers/score with each cluster's top DE genes and receives\n  ranked candidates + evidence.\n\n  Pro tier because the evidence-driven approach is the agent's\n  differentiator: cell types come with traceable PMIDs in their\n  original biological context, including negative-marker conflicts and\n  disease-specific marker pools. Community-tier annotation tools\n  (PanglaoDB / CellMarker static lists, GPTCellType prompts) cannot\n  match this audit trail.\n\n  Pipeline:\n    1. Verify input AnnData has cluster labels (leiden / louvain).\n    2. Extract per-cluster top DE markers via scanpy rank_genes_groups.\n    3. POST each cluster's marker list to /api/markers/score with the\n       user-supplied (species, tissue, disease?) context.\n    4. For each cluster, the agent's own session re-ranks against the\n       returned candidates — apply biological-plausibility rules,\n       prefer specific over generic, respect negative-marker rejects.\n    5. Write final labels back to adata.obs and produce an audit table\n       with overlap details + PMID evidence.\n\n  Does NOT do preprocessing (`single_cell_preprocessor` produces the\n  input clustered AnnData), does NOT do trajectory analysis, does NOT\n  do cell-cell communication, does NOT write the manuscript prose\n  (`scientific_writer` reads the audit table as input).\n---\n\n# Single-cell Annotator Pro — locked\n\nThis agent is part of the **pro** subscription tier.\n\nSubscribe at https://app.omicverse.com/#/subscriptions to unlock the full prompt.\n",
+  "required_tier": "pro",
+  "summary": "文献证据 cell-type 注释 —— OmicosAnno 89 万条标注 + signed-template 评分 + 本会话 LLM 生物学仲裁 + PubMed 句子级证据",
+  "tier": "pro",
+  "toolsets": [
+    "file_manager",
+    "python_interpreter",
+    "omicverse_lookup",
+    "plan",
+    "think",
+    "task",
+    "skill",
+    "memory"
+  ],
+  "updated_at": 1782605212,
+  "use_when": "拿到已聚类的 AnnData (`scmarker_preprocessor` 输出 / 任何带 `leiden`/`louvain` 的 .h5ad)，要给每个 cluster 标 cell type，并要可审计的文献证据"
+}
