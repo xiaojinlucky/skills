@@ -48,3 +48,12 @@
 12. 普通回答不暴露模式、阶段、方法编号、锚点和候选状态等维护术语，优先使用中文科研社区自然、准确且容易理解的表达。
 13. Private 仓库 `xiaojinlucky/skills` 只保存可审查的项目快照，不上传原始课程、知识星球数据库、音视频、完整本地转写、虚拟环境、scratch 或 Codex memory 原文件。网页版 GPT 的规划必须由本地 Codex 结合实际 Skills、memory 和运行环境重新落地。
 14. 经用户明确确认公开发布授权的四类原始资料，单独放在 Public 仓库 `xiaojinlucky/Resources`，不与 Private 的 Skill 项目快照混放。
+
+
+## 2026-08-28 README 门面返工
+
+- 根目录中文 README 已按研究生科研思路流重新组织，首屏、问题入口、科研推进路径、方法地图、30 秒开始、提问示例、方法原则与使用边界形成清晰层级。
+- `assets/readme/hero.svg` 已重做为 Palm 配色的低密度纯 SVG：重要文案集中在左侧，右侧仅保留无文字科研推进图形；头像继续使用仓库已有 `assets/readme/avatar.jpg`。
+- Hero 已在原始 1200、桌面 900 和窄屏 360 三档实际渲染检查；首次审查发现标签不可换行导致的窄屏溢出风险，删除不可换行空格后重新审查。
+- 独立只读 reviewer 对 `README.md` blob `e5149b8b8af5de622da68e164b554f807cd3a812` 与 Hero blob `dc19ea6de9abd7639f93f1d774a225122c961aaf` 给出 PASS：无重叠、裁切、越界、低对比或层级混乱；头像、alt、SVG 可访问性字段、折叠区和 13 个 Skill 链接均通过。
+- 仓库为 Private，未登录云浏览器访问 live GitHub 页面返回 404，因此没有把 live 页面截图写成已完成；GitHub 兼容性结论来自远端最终字节、支持结构检查、README 审计脚本与三档实际图像渲染。
