@@ -14,10 +14,10 @@
 </p>
 
 <p align="center">
-  <img alt="中文科研" src="https://img.shields.io/badge/中文科研-43593B?style=flat-square&amp;labelColor=F0EFEB" />
-  <img alt="研究生友好" src="https://img.shields.io/badge/研究生友好-77835A?style=flat-square&amp;labelColor=F0EFEB" />
-  <img alt="生物医学与生信" src="https://img.shields.io/badge/生物医学与生信-58402E?style=flat-square&amp;labelColor=F0EFEB" />
-  <img alt="从 GAP 到下一步" src="https://img.shields.io/badge/从_GAP_到下一步-D4A017?style=flat-square&amp;labelColor=F0EFEB" />
+  <code>中文科研</code>&nbsp;&nbsp;
+  <code>研究生友好</code>&nbsp;&nbsp;
+  <code>生物医学与生信</code>&nbsp;&nbsp;
+  <code>从 GAP 到下一步</code>
 </p>
 
 ## 先从你现在卡住的地方开始
