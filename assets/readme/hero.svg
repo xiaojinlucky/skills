@@ -1,61 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="1200" height="380" viewBox="0 0 1200 380"
+     width="1200" height="340" viewBox="0 0 1200 340"
      role="img" aria-labelledby="title desc">
-  <title id="title">做科研的大师兄：把科研问题推进到下一步</title>
-  <desc id="desc">一套面向研究生的中文科研思路 Skill，从问题、GAP、证据和验证走向下一步行动。</desc>
+  <title id="title">做科研的大师兄</title>
+  <desc id="desc">面向研究生的中文科研思路 Skills，帮助课题从发现问题走向可判断、可验证、可写成论文主线的下一步。</desc>
 
-  <rect width="1200" height="380" rx="28" fill="#F0EFEB"/>
+  <rect width="1200" height="340" rx="28" fill="#F0EFEB"/>
 
-  <g id="editorial-lines" fill="none" stroke="#58402E" stroke-linecap="round">
-    <path d="M66 30H402" stroke-width="2" opacity=".18"/>
-    <path d="M66 338H1132" stroke-width="2" opacity=".16"/>
-    <path d="M704 62H1132" stroke-width="2" opacity=".14"/>
+  <g id="title-block"
+     font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans CJK SC','PingFang SC','Microsoft YaHei',sans-serif">
+    <text x="72" y="138" font-size="72" font-weight="750" fill="#43593B">
+      做科研的大师兄
+    </text>
+    <text x="72" y="208" font-size="40" font-weight="650" fill="#58402E">
+      把课题从「有想法」推进到「有下一步」
+    </text>
   </g>
 
-  <g id="title-block" transform="translate(66 44)" fill="#58402E">
-    <text x="0" y="0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif"
-          font-size="20" font-weight="700" letter-spacing="3" fill="#43593B">科研思路 · AGENT SKILLS</text>
-    <text x="0" y="76" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif"
-          font-size="58" font-weight="750">做科研的大师兄</text>
-    <text x="0" y="124" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif"
-          font-size="27" font-weight="600">从 GAP，到下一步能执行的判断</text>
-    <text x="0" y="162" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif"
-          font-size="24" fill="#77835A">一套给研究生使用的中文科研思路流</text>
+  <g id="research-path" aria-hidden="true">
+    <path d="M790 272 C848 272 846 214 902 214 S958 154 1014 154 S1068 84 1122 84"
+          fill="none" stroke="#ACAD79" stroke-width="12" stroke-linecap="round"/>
 
-    <rect x="0" y="201" width="178" height="42" rx="21" fill="#D4A017"/>
-    <text x="89" y="229" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif"
-          font-size="21" font-weight="700" fill="#58402E">先判断，再推进</text>
-  </g>
+    <circle cx="790" cy="272" r="35" fill="#F2D17E" stroke="#58402E" stroke-width="4"/>
+    <text x="790" y="284" text-anchor="middle"
+          font-family="Georgia,'Songti SC',serif" font-size="42" font-weight="700" fill="#58402E">?</text>
 
-  <g id="step-map" transform="translate(680 48)">
-    <text x="0" y="0" font-family="ui-monospace,SFMono-Regular,Menlo,monospace"
-          font-size="18" letter-spacing="2" fill="#77835A">A RESEARCH PATH YOU CAN WALK</text>
-
-    <path d="M36 250H118V205H200V160H282V115H364V70H420"
-          fill="none" stroke="#43593B" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
-    <path d="M36 268H118V223H200V178H282V133H364V88H420"
-          fill="none" stroke="#ACAD79" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".9"/>
-
-    <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif"
-       font-size="23" font-weight="700" fill="#58402E">
-      <circle cx="36" cy="250" r="16" fill="#F2D17E" stroke="#58402E" stroke-width="3"/>
-      <text x="36" y="304" text-anchor="middle">问题</text>
-
-      <circle cx="118" cy="205" r="16" fill="#ACAD79" stroke="#58402E" stroke-width="3"/>
-      <text x="118" y="280" text-anchor="middle">GAP</text>
-
-      <circle cx="200" cy="160" r="16" fill="#77835A" stroke="#58402E" stroke-width="3"/>
-      <text x="200" y="232" text-anchor="middle">证据</text>
-
-      <circle cx="282" cy="115" r="16" fill="#43593B" stroke="#58402E" stroke-width="3"/>
-      <text x="282" y="190" text-anchor="middle">验证</text>
-
-      <circle cx="364" cy="70" r="16" fill="#D4A017" stroke="#58402E" stroke-width="3"/>
-      <text x="364" y="43" text-anchor="middle">下一步</text>
+    <g transform="translate(864 172)">
+      <rect width="76" height="84" rx="16" fill="#F0EFEB" stroke="#77835A" stroke-width="4"/>
+      <path d="M18 24H58 M18 42H52 M18 60H44" stroke="#77835A" stroke-width="5" stroke-linecap="round"/>
     </g>
 
-    <g id="step-notes" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="18" fill="#58402E">
-      <text x="0" y="324">OWN DATA · CLEAR CLAIM · NEXT ACTION</text>
+    <g transform="translate(977 117)">
+      <rect width="74" height="74" rx="20" fill="#43593B"/>
+      <path d="M19 39l12 12 25-29" fill="none" stroke="#F0EFEB" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
+
+    <circle cx="1122" cy="84" r="38" fill="#D4A017"/>
+    <path d="M1106 84h29m-11-12 12 12-12 12" fill="none" stroke="#58402E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <path d="M806 42h316" stroke="#58402E" stroke-width="2" opacity=".16"/>
+    <path d="M742 310h380" stroke="#58402E" stroke-width="2" opacity=".14"/>
   </g>
 </svg>
