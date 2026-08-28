@@ -14,9 +14,9 @@
 </p>
 
 <p align="center">
-  <code>中文科研</code>&nbsp;&nbsp;
-  <code>研究生友好</code>&nbsp;&nbsp;
-  <code>生物医学与生信</code>&nbsp;&nbsp;
+  <code>中文科研</code>
+  <code>研究生友好</code>
+  <code>生物医学与生信</code>
   <code>从 GAP 到下一步</code>
 </p>
 
