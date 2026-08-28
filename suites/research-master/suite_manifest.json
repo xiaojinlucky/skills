@@ -63,7 +63,22 @@
     "ordinary_dialogue_added_agent_calls": 0,
     "ordinary_dialogue_reads_raw_corpus": false,
     "same_skill_may_repeat_without_state_change": false,
-    "shared_core_loads_per_task": 1
+    "shared_core_loads_per_task": 1,
+    "shared_resource_resolution": {
+      "resource_ids_are_logical": true,
+      "resolver": "suite manifest or equivalent host resource resolver",
+      "on_missing": "report and use minimal degradation; do not guess"
+    },
+    "methodology_projection_fields": [
+      "owner",
+      "owned_question",
+      "judgment",
+      "decisive_evidence",
+      "go_no_go",
+      "explanation_order",
+      "handoff"
+    ],
+    "projection_write_policy": "write only when a participating skill materially changes the state"
   },
   "cutover": {
     "install_ready": true,

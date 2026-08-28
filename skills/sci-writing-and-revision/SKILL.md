@@ -1,29 +1,161 @@
 ---
 name: sci-writing-and-revision
-description: Design the scientific story, Figure sequence, claim hierarchy, manuscript logic, and revision strategy for biomedical, bioinformatics, omics, mechanism, or translational research. Use when the user needs to turn results into a paper, decide Figure order, find story gaps, prepare a revision plan, or judge which new experiments answer reviewers. Delegate actual manuscript prose to nature-writing or academic-paper and point-by-point replies to nature-response.
+description: 已有科研结果，需要构建论文主线与 Figure 证据顺序、撰写或修改 SCI 原稿、处理审稿意见、回复信和 cover letter 时使用。适用于普通 SCI 或一般生命科学稿件；不用于 Nature/CNS 专门写作、正式期刊回复或完整论文流水线。Figure 数量、叙事结构和补实验强度由核心 claim、证据和目标期刊真实要求决定；不固定六图、A-B-C-D、rescue 或期刊分数。
+metadata:
+  tags: [sci-writing, manuscript-structure, figures, revision, reviewer-response]
+  related_skills: [hypothesis-construction, innovation-judgment, mechanism-design, causality-rescue, review-writing]
 ---
 
-# SCI Writing and Revision
+# SCI 写作与返修
 
-先把科学问题和证据顺序搭清楚，再写句子。文章真正的骨架是每张 Figure 在回答什么。
+## 共享内核
 
-## 必读
+进入本 Skill 前，通过当前宿主的 `research-master` suite manifest 或等价资源解析器读取：
 
-本任务尚未加载时，读 `../../suites/research-master/shared/research-core.md`、`../../suites/research-master/shared/routing-and-authority.md`、`../../suites/research-master/shared/research-state.md` 和 `../../suites/research-master/shared/expression-core.md`。长文按 `../../suites/research-master/sources/source-index.json` 读取 `../../suites/research-master/methods/method-cards.md` 的“从结果到文章”和真正相关的最小来源摘录集合；已加载就直接复用。
+- `shared/research-core.md`
+- `shared/expression-core.md`
 
-## 合同
+这里使用逻辑资源名，不依赖用户目录或宿主私有绝对路径。资源无法解析时明确说明并按最小降级继续，不猜测共享规则。
 
-- **进入条件**：已有结果，需要建立故事、Figure 骨架、结论层级或返修战略。
-- **唯一负责的决定**：确定文章主张、Figure 问题顺序、证据缺口和返修优先级。
-- **退出条件**：每张 Figure 的科学问题、面板证据、可支持结论和缺口明确，返修行动能逐条对应审稿问题。
-- **交接对象**：主张与 Figure 骨架确定后交给 `nature-writing` 或 `academic-paper`；返修回复交给 `nature-response`；只有用户明确要求学术 HTML 时才交给 `academic-html-report`。
+本文件只负责普通 SCI 或一般生命科学稿件的主线、Figure、正文结构和返修判断。以 Nature/CNS 风格起草交给 `nature-writing` 或 `nature-polishing`，正式逐条回复交给 `nature-response`，完整论文流水线交给 `academic-paper`；这些路由不能反过来改变当前证据和 claim 边界。观察、推断、假设和验证事实必须始终区分。
 
-## 工作流
+## 独立职责
 
-1. 用一句话写主结论，再列出支撑它必须成立的关键关系。
-2. 每张 Figure 只承担一个主要科学问题，按发现、解释、因果和边界组织证据。
-3. 图数由故事决定，不固定六张；没有数据支撑的关系不能靠 Discussion 补出来。
-4. 返修先判断评论真正卡住的是事实、分析、实验、表达还是范围，再选最短有效回应。
-5. 新实验优先补会改变结论或编辑决定的缺口，不为显得努力堆工作量。
+- 从已有结果提炼一个证据可支持的核心 claim。
+- 按读者理解和因果依赖组织 Figure 与正文。
+- 识别数据已经支持什么、还不能说什么。
+- 处理审稿意见，区分必须修复、需要解释、可合理不同意和扩需求。
+- 让回复信逐项可核对，不用防御性长文掩盖问题。
+- 修改局部 finding 时保留未被推翻的正确主线。
 
-故事、Figure 和主张层级由本 skill 负责；这些主张确定后的正文起草和引用由对应专业 skill 完成，本 skill 不越权生成未经核实的事实。
+## 进入条件
+
+至少需要：
+
+- 当前项目的正式结果、图表或结果清单；
+- 想表达的核心结论；
+- 数据与验证边界；
+- 目标期刊或稿件类型（若已确定）；
+- 返修时的完整审稿意见和当前稿件。
+
+如果核心候选或假设尚未形成，先回到 hypothesis-construction 或 innovation-judgment。不要用写作替代缺失的科学判断。
+
+## 初稿流程
+
+### 1. 冻结当前可支持的 claim
+
+写出：
+
+- 一句话主 claim；
+- 2–4 个必要子 claim；
+- 每个 claim 对应的直接证据；
+- 不能说的因果、普遍性或临床外推。
+
+核心 claim 必须来自当前项目证据。文献用于已知边界和解释，不把已发表答案变成自己的故事骨架。
+
+### 2. 先搭证据顺序，再定 Figure 数量
+
+每个主 Figure 应回答一个必要问题，例如：
+
+- 现象或问题是否存在；
+- 候选如何从数据中产生；
+- 关系是否在独立背景稳定；
+- 干预是否改变关键表型；
+- 哪个机制或细胞关系解释现象；
+- 证据如何连接到功能、模型或应用。
+
+Figure 数量由必要问题决定，可以少于或多于六个。相同问题的证据合并；不为凑数拆图，也不为版面压缩不同 claim。
+
+### 3. 组织读者路径
+
+常见但非唯一顺序：
+
+问题与观察
+→ 候选产生
+→ 关键验证
+→ 机制或因果升级
+→ 边界、功能和意义
+
+实际实验顺序可以不同于写作顺序，但不能通过重排隐藏相反结果、选择性报告或把探索写成预设验证。
+
+### 4. 写正文
+
+- Results：每段先说问题，再给证据与边界，不提前扩展 Discussion。
+- Introduction：从未解决问题收敛到本研究目标，不写成完整综述。
+- Discussion：解释贡献、与已知工作的关系、冲突、边界和下一步；不把 limitation 写成机械自我否定。
+- Methods：足以复现并与真实分析一致。
+- Abstract 与标题：在正文稳定后写，claim 强度与证据一致。
+
+### 5. 一致性检查
+
+检查：
+
+- 样本数、分组、统计、命名和方向跨图文一致；
+- 图注能独立说明设计和统计；
+- 观察、推断与因果语言匹配；
+- 正文不遗漏相反或无效结果中的重要边界；
+- 引用真实支持对应陈述；
+- 期刊格式和数据共享要求来自当前官方说明。
+
+## 返修流程
+
+### 1. 建立意见映射
+
+逐条记录：
+
+- reviewer 原意；
+- 它指出的真实问题；
+- 当前稿件哪里受影响；
+- 采取修改、补分析、补实验、解释或有依据地不同意；
+- 修改位置和证据。
+
+稳定编号可以防丢项，但普通返修不为此建立复杂 ledger。
+
+### 2. 判断请求是否必要
+
+- 会影响正确性、核心 claim、可重复性或读者判断：处理。
+- 真实问题可以用已有数据或澄清解决：优先最小充分修复。
+- 请求超出研究范围且不改变核心结论：礼貌说明边界，不自动扩展项目。
+- 审稿意见基于误读：先改善稿件表达，再解释。
+- 意见要求把结果改成文献方向：保留可靠数据，说明背景或冲突。
+
+Reviewer 可以没有新的阻塞 finding；返修不是必须无限补实验。
+
+### 3. 写回复
+
+每条回复：
+
+1. 简短感谢或确认问题；
+2. 直接给判断；
+3. 说明做了什么及结果；
+4. 指出稿件位置；
+5. 若不同意，给证据和范围边界。
+
+不要先写长篇防御，也不要声称完成未实际做过的分析或实验。
+
+### 4. 复验
+
+只复验本轮改动和它真实影响的相邻内容。共享数据合同、核心统计或主 claim 变化时扩大检查；局部措辞不触发全量重做。
+
+## 输出合同
+
+根据任务输出：
+
+1. 核心 claim 与证据边界；
+2. Figure / Results 问题顺序；
+3. 每幅图或每节承担的唯一职责；
+4. 正文或修改稿；
+5. 审稿意见映射与逐条回复；
+6. 必须补充、可用现有证据解决和合理拒绝的事项；
+7. 仍会改变投稿判断的真实缺口。
+
+## 常见失败
+
+- 固定六图或线性机制模板；
+- 为提高“档次”重排到超出证据；
+- 把未验证机制写进标题和摘要；
+- 每条审稿意见都升级成新实验；
+- 只回复 reviewer，不修改造成误读的正文；
+- 局部 finding 推翻全部主线；
+- 用影响因子承诺代替稿件与目标期刊匹配判断；
+- 为查重或 AI 检测机械改写而损害准确性。

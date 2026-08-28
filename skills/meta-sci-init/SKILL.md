@@ -9,7 +9,7 @@ description: Run an interactive zero-to-one research opening workflow for a new 
 
 ## 必读
 
-本任务尚未加载时，读 `../../suites/research-master/shared/research-core.md`、`../../suites/research-master/shared/routing-and-authority.md`、`../../suites/research-master/shared/research-state.md` 和 `../../suites/research-master/shared/expression-core.md`；已经记录在 `loaded_resources` 中就直接复用。
+本任务尚未加载时，读 `~/.codex-shared/suites/research-master/shared/research-core.md`、`~/.codex-shared/suites/research-master/shared/routing-and-authority.md`、`~/.codex-shared/suites/research-master/shared/research-state.md` 和 `~/.codex-shared/suites/research-master/shared/expression-core.md`；已经记录在 `loaded_resources` 中就直接复用。
 
 ## 合同
 
@@ -26,3 +26,18 @@ description: Run an interactive zero-to-one research opening workflow for a new 
 4. 输出第一版开题交付：一句话问题、已知边界、核心假设、研究目标、关键路线、最小预实验和答辩风险点。
 
 不承担项目全生命周期调度；课题进入正式执行或跨阶段重排后交给 `meta-research-hub`。
+
+## 长稿能力（按需读取，未丢弃）
+
+短合同是正式入口。原始开题向导里多出来的流程没有删，放到 `references/`，用到再读，以后可以再删减。
+
+| 用户要做什么 | 读取 |
+|---|---|
+| 交互式开题：问诊、联网调研、推荐 5 个选题、定题、假设与方案、逐节写开题报告 | `references/opening-playbook.md`，并按其中指引读同目录其它卡片 |
+| 选题怎么从文献收成 5 个可判断选项 | `references/topic_recommendation.md` |
+| 前期基础如何落到假设、Aim 和实验方案 | `references/hypothesis_and_design.md`、`references/research_model.md` |
+| 开题报告章节骨架 | `references/proposal_structure.md` |
+| 明确说了要做开题答辩 PPT | `references/ppt-generation.md`、`references/ppt_structure.md`；脚本在 `scripts/build_pptx.py` |
+| 需要对照或抽回 2026-08-11 原始长稿全文 | `references/archive-original-SKILL.md` |
+
+调用专业 skill 仍然服从上面的短合同和创新隔离墙。长稿负责把「从零到一」走成可交付的开题报告，不能改写 `research-core.md` 的事实边界。

@@ -9,7 +9,7 @@ description: Deep-read one or a small set of biomedical, bioinformatics, omics, 
 
 ## 必读
 
-本任务尚未加载时，读 `../../suites/research-master/shared/research-core.md`、`../../suites/research-master/shared/routing-and-authority.md` 和 `../../suites/research-master/shared/expression-core.md`。按需读 `../../suites/research-master/methods/method-cards.md` 的“从阅读到选题”；已加载就直接复用。
+本任务尚未加载时，读 `~/.codex-shared/suites/research-master/shared/research-core.md`、`~/.codex-shared/suites/research-master/shared/routing-and-authority.md` 和 `~/.codex-shared/suites/research-master/shared/expression-core.md`。按需读 `~/.codex-shared/suites/research-master/methods/method-cards.md` 的“从阅读到选题”；已加载就直接复用。
 
 ## 合同
 
@@ -29,3 +29,16 @@ description: Deep-read one or a small set of biomedical, bioinformatics, omics, 
 输出时把“论文已经得到的生物学结论”和“可迁移的方法与分析体系”明确分开。除非用户明确要求复现或检验某项既有结论，只迁移问题拆解、无偏筛选、分析顺序、证据组织和验证设计；不得把论文结论直接设为用户课题的假设、评分终点或期望答案。迁移后的新结论必须由用户自己的数据产生。
 
 如果用户要逐段双语全文读本，转给 `nature-reader`，不要重复造一套全文解析。
+
+## 长稿能力（按需读取，未丢弃）
+
+短合同负责组会、课题迁移和证据链重建。原始公众号带读没有删，放到 `references/`，用到再读。
+
+| 用户要做什么 | 读取 |
+|---|---|
+| 组会/课题设计式拆一篇或少量论文 | 只用上面的短合同 |
+| 公众号或 BioAdvance 风格带读推文、四遍阅读、work model 叙事 | `references/wechat-deep-read.md` |
+| PDF 解析、MinerU、DOI 取全文 | `references/pdf-and-tools.md` |
+| 需要对照或抽回 2026-07-22 原始长稿全文 | `references/archive-original-SKILL.md` |
+
+两种产品形态可以并存：短合同回答「这篇论文的证据链能否迁移到本课题」；长稿回答「怎样写成一篇带读推文」。科学边界仍服从 `research-core.md`，不得把论文生物学结论预填为本课题答案。

@@ -1,30 +1,167 @@
 ---
 name: grant-and-opening
-description: Build or audit a biomedical, bioinformatics, omics, or experimental grant proposal, opening report, research plan, or defense logic around a clear question, innovation, evidence, feasibility, mechanism depth, and decisive validation. Use when preparing a grant, thesis proposal, project application, opening report, or proposal defense. Verify current funder, institution, year, format, and eligibility requirements before treating them as facts.
+description: 写或审查国自然标书、开题报告、进展报告和科研计划书时使用。适用于把已有科学主线组织成材料；不用于只有宽泛方向时替代课题收敛，也不替代当前官方制度核验。负责把当前项目已经形成的科学问题、创新窗口、前期证据、研究目标、技术路线、可行性和风险组织成与具体资助类别或开题要求相称的方案；不以固定机制层数、前期完成百分比或 rescue 数量机械预测中标，不从文献复制候选。
+metadata:
+  tags: [grant, NSFC, opening-report, preliminary-evidence, feasibility, research-plan]
+  related_skills: [hypothesis-construction, innovation-judgment, causality-rescue, pre-experiment-design, sci-writing-and-revision, thesis-and-defense]
 ---
 
-# Grant and Opening
+# 标书与开题方案
 
-标书和开题的任务，是让评审看明白：问题重要，思路成立，你有能力把关键关系做实。
+## 共享内核
 
-## 必读
+进入本 Skill 前，通过当前宿主的 `research-master` suite manifest 或等价资源解析器读取：
 
-本任务尚未加载时，读 `../../suites/research-master/shared/research-core.md`、`../../suites/research-master/shared/routing-and-authority.md`、`../../suites/research-master/shared/research-state.md` 和 `../../suites/research-master/shared/expression-core.md`。长文按 `../../suites/research-master/sources/source-index.json` 读取真正相关的最小卡片集合；已加载就直接复用。
+- `shared/research-core.md`
+- `shared/execution-and-validity.md`
+- `shared/expression-core.md`
 
-## 合同
+这里使用逻辑资源名，不依赖用户目录或宿主私有绝对路径。资源无法解析时明确说明并按最小降级继续，不猜测共享规则。
 
-- **进入条件**：需要规划、撰写或审查标书、开题报告、研究计划及其答辩。
-- **唯一负责的决定**：确定申报或开题的论证骨架、前期证据定位和可执行路线。
-- **退出条件**：科学问题、创新、假设、目标、路线、前期依据、风险处置和答辩逻辑互相对得上。
-- **交接对象**：真实规则核验工具、`pre-experiment-design`、实际写作 skill、`thesis-and-defense`。
+这些共享规则负责 Novelty Firewall、discovery-first、证据边界和表达。本文件只负责把现有科研主线组织成资助或开题材料。
 
-## 工作流
+## 独立职责
 
-1. 先核实当年、对应项目或学校的官方要求；未核实的格式、资格、限字和时间不能写成事实。
-2. 用一句话科学问题统领立项依据、研究目标和技术路线。
-3. 把创新点落到可证明的差异，而不是形容词。
-4. 前期证据分别说明“已经证明什么”和“还需要资助解决什么”。
-5. 研究内容围绕关键关系排顺序，给出决定性验证、必要对照和真实可达的风险处置。
-6. 答辩准备围绕最可能改变评审判断的问题，不背固定话术。
+- 识别具体项目类别、当年指南、申请人阶段和项目真实资源。
+- 把科学问题、中心假设、研究目标、创新性和证据链对齐。
+- 判断前期数据是否足以证明候选来自当前项目、方法可行且风险可控。
+- 设计彼此有逻辑但不互相完全依赖的研究目标。
+- 说明关键风险、替代路线和成功判据。
+- 在需要时组织题目、摘要、立项依据、研究内容、技术路线与时间计划。
 
-不使用统一完成比例、成功率、评审阅读分钟数或期刊档次承诺。
+本 Skill 不负责：
+
+- 从论文中挑一个热门分子充当本项目答案；
+- 用固定 A-B-C-D 层数替代科学问题；
+- 用前期完成百分比替代证据判断；
+- 把每个节点都要求 rescue；
+- 对中标率、影响因子或评审结果作保证。
+
+## 进入条件
+
+至少需要以下信息中的大部分：
+
+- 申请或开题类型、年份和明确格式要求；
+- 当前课题自己的数据、异常、模型或预实验；
+- 想回答的核心科学问题；
+- 可用样本、模型、技术、时间和协作资源；
+- 已知边界、竞争工作和真正的 GAP。
+
+若具体类别或当年指南会改变结构、字数、资格或预算，先核对真实文件。不能把历史模板当成当前事实。
+
+若当前只有宽泛方向而没有项目内信号，先调用 topic-convergence 或 meta-sci-init。若候选已形成但创新空间不清，先调用 innovation-judgment。
+
+信息不足时按最小降级处理：只整理用户已经提供的事实、待核验事项和关键缺口，并明确“当前只能形成材料骨架，不能形成中心命题”。缺少的内容不能用看似完整的占位符、推测性证据或未经支持的可行性判断填上；只有在项目事实和真实约束足够时，才组织完整材料。
+
+## 评估原则
+
+### 1. 科学问题优先
+
+先用一句话说明：
+
+- 当前已知什么；
+- 当前项目观察到什么尚未解释的现象；
+- 哪个关键未知值得投入；
+- 回答它会改变什么认识或实践。
+
+题目、假设和研究目标都必须服务这一未知，不能先列方法再拼问题。
+
+### 2. 创新判断基于实质差异
+
+创新可以来自新现象、新背景、新阶段、新细胞关系、矛盾证据、新机制或新的可验证连接。文献篇数少不是自动创新，文献先例少也不是自动降级。
+
+候选必须可追溯到当前项目证据。文献负责划定 known、partial-known、contradictory、GAP 或 novel，不负责预填答案。
+
+### 3. 证据与目标相称
+
+前期数据的任务是：
+
+- 证明问题真实存在；
+- 证明核心候选来自当前项目；
+- 证明关键方法和模型可行；
+- 降低最可能导致项目失败的风险。
+
+是否充分由具体 claim、项目类别、模型难度和失败代价决定，不套固定百分比。
+
+### 4. 因果深度按 claim 决定
+
+如果项目主张因果机制，关键边需要能区分主要替代解释的干预证据。rescue 只有在能明显增强关键 claim 时才纳入，具体设计交给 causality-rescue。
+
+描述性、资源型、方法型、临床预测型或难以实验干预的项目，不为迎合模板强加线性多层机制。
+
+### 5. 目标既连贯又可独立判断
+
+每个研究目标应明确：
+
+- 要回答的子问题；
+- 输入证据与方法；
+- 成功、部分成功和失败的结果；
+- 结果如何改变下一目标或总体结论；
+- 失败时仍可获得什么信息。
+
+避免目标 2 完全依赖目标 1 的唯一预期结果，导致一处失败全盘失效。
+
+## 执行流程
+
+1. **确认真实申报或开题约束**
+   - 核对类别、指南、资格、格式、字数、预算和时间。
+   - 只加载当前需要的正式要求。
+
+2. **恢复项目主线**
+   - 整理自己的关键观察、候选来源、已知边界、GAP 和中心问题。
+   - 区分观察、推断、假设和已验证事实。
+
+3. **形成中心假设或中心命题**
+   - 写成可证伪的关系，并限定适用背景。
+   - 不把论文结论直接填入变量位置。
+
+4. **设计最低充分的研究目标**
+   - 每个目标解决一个关键未知。
+   - 机制、组学、干预或验证方法按问题选择，不为数量增加目标。
+
+5. **盘点前期证据与风险**
+   - 说明每条前期证据支持什么、不能支持什么。
+   - 对真正会改变可行性的风险提供替代方法或降级 claim。
+
+6. **组织申请材料**
+   - 题目和摘要先讲清问题、GAP、核心命题、路线与预期贡献。
+   - 立项依据服务问题，不写成无边界文献综述。
+   - 技术路线显示决策逻辑，不只是方法清单。
+
+7. **按真实评审标准审查**
+   - 检查问题价值、创新实质、证据匹配、可行性、申请人基础和表达。
+   - 只处理会影响资助或开题判断的问题；没有阻塞问题时允许 PASS。
+
+## 输出合同
+
+根据任务输出：
+
+1. 当前材料类型及真实约束；
+2. 一句话科学问题与 GAP；
+3. 中心假设或中心命题；
+4. 2–4 个由问题决定的研究目标；
+5. 前期证据矩阵：支持、边界、缺口；
+6. 技术路线与关键决策点；
+7. 主要风险及最低充分替代方案；
+8. 题目、摘要或章节草稿；
+9. 会真正改变评审判断的待补信息。
+
+## 常见错误
+
+- 用热门论文结论替自己的候选来源；
+- 把机制层数、前期比例或 rescue 数量写成普遍门槛；
+- 研究目标只是技术平台清单；
+- 所有目标依赖同一个未经验证的前提；
+- 风险部分罗列理论可能性却没有决策价值；
+- 为显得完整堆入超出时间、样本和经费的工作；
+- 对中标、发表层级或分数作无依据承诺。
+
+## 交接
+
+- 方向收敛：topic-convergence
+- 创新判断：innovation-judgment
+- 假设构建：hypothesis-construction
+- 机制设计：mechanism-design
+- 因果与 rescue：causality-rescue
+- 具体实验计划：pre-experiment-design
+- 正文改写：sci-writing-and-revision

@@ -1,29 +1,159 @@
 ---
 name: causality-rescue
-description: Design and judge causal evidence for a key biomedical or bioinformatics relationship using necessity, sufficiency, rescue, temporal order, specificity, controls, and alternative explanations. Use when the user needs a rescue experiment, asks whether correlation is enough, wants to prove one factor mediates another, or must strengthen a mechanism claim. Do not treat P greater than 0.05 after adjustment as proof of full mediation or promise a journal tier.
+description: 当前课题已经由自己的数据、异常或预实验形成候选关系，需要校准因果 claim、区分相关性/必要性/充分性/中介关系，或设计最低充分的扰动、回补、rescue、时间顺序和替代解释实验时使用。适用于因果强度和干预设计；不用于尚未形成候选的方向探索、单纯关联描述或具体实验排期。rescue 是强因果设计之一，不是所有节点、所有研究和所有期刊的固定门槛；不从论文复制因果链，不用机制层数或 rescue 数量机械预测期刊分数。
+metadata:
+  tags: [causality, rescue, intervention, mediation, experiment-design, claim-calibration]
+  related_skills: [mechanism-design, hypothesis-construction, pre-experiment-design, innovation-judgment, grant-and-opening]
 ---
 
-# Causality Rescue
+# 因果论证与 rescue 设计
 
-因果论证的核心是对关键关系动手，看结果会不会按预测改变，而不是把相关性写得更响亮。
+## 共享内核
 
-## 必读
+进入本 Skill 前，通过当前宿主的 `research-master` suite manifest 或等价资源解析器读取：
 
-本任务尚未加载时，读 `../../suites/research-master/shared/research-core.md`、`../../suites/research-master/shared/routing-and-authority.md`、`../../suites/research-master/shared/research-state.md` 和 `../../suites/research-master/shared/expression-core.md`。按需读 `../../suites/research-master/methods/method-cards.md` 的“从相关到因果”；已加载就直接复用。
+- `shared/research-core.md`
+- `shared/execution-and-validity.md`
+- `shared/expression-core.md`
 
-## 合同
+这里使用逻辑资源名，不依赖用户目录或宿主私有绝对路径。资源无法解析时明确说明并按最小降级继续，不猜测共享规则。
 
-- **进入条件**：核心结论依赖一条因果边，需要设计或判断必要性、充分性、回补和中介关系。
-- **唯一负责的决定**：确定当前因果主张需要哪些决定性操纵、对照和结论边界。
-- **退出条件**：每条关键因果边的证据状态、缺口、实验和可支持表述明确。
-- **交接对象**：`mechanism-design`、`pre-experiment-design`、`sci-writing-and-revision`。
+这些文件负责 Research 的 discovery-first、Novelty Firewall、证据边界和通用表达。本文件只负责因果 claim 与干预设计。
 
-## 工作流
+## 独立职责
 
-1. 只选真正决定论文主张的关键边，不给每个相关关系都机械加 rescue。
-2. 分别问必要性、充分性和回补：去掉是否减弱，加入是否产生，恢复是否救回。
-3. 检查操纵特异性、剂量和时间顺序、关键阴阳性对照、读出是否贴近主张。
-4. 主动设计能区分替代解释的条件；如果不能排除，就相应收窄因果语言。
-5. 统计中介只能作为一类证据，不能用单个显著性变化宣布完全中介。
+- 把用户想说的机制结论改写成可检验的因果 claim。
+- 判断现有证据支持的是相关、先后、必要、充分、中介、直接作用还是更弱的层级。
+- 找出仍然活着、且会改变核心结论的替代解释。
+- 选择能区分主要解释的最低充分干预和读出。
+- 在确有信息增益时设计回补或 rescue，不把它机械铺到每个箭头。
+- 说明不同实验结果将怎样改变 claim、机制图和下一步。
 
-实验不必形式上三件套齐全，但结论强度必须和实际完成的因果证据相匹配。
+## 进入条件与边界
+
+进入本 Skill 前，候选关系必须主要来自当前课题的数据、异常、模型、扰动或预实验。论文可以帮助理解工具、对照、已知边界和实验设计，不能替当前项目预填因果答案。
+
+如果用户明确要复现或外部验证已发表的因果关系，可以从论文关系进入，但必须把任务和输出标为 replication / validation，而不是把已发表关系包装成当前项目的新发现；干预强度和结论范围仍按当前模型与证据如实校准。
+
+以下情况不要直接进入：
+
+- 核心表型或候选尚未形成：先用 hypothesis-construction 或 mechanism-design。
+- 用户只需要描述关联，不主张因果：保留关联语言，不强行升级实验。
+- 需要具体样本、批次、操作步骤和排期：交给 pre-experiment-design。
+- 需要判断创新空间：交给 innovation-judgment，不能用 rescue 数量代替创新判断。
+
+## 因果 claim 校准
+
+先把原始表述拆成：
+
+1. **对象**：A、B、表型 Y 与适用背景。
+2. **方向**：A 是否改变 B，B 是否改变 Y。
+3. **范围**：特定细胞、阶段、条件、剂量或时间窗。
+4. **强度**：观察到相关，还是主张必要、充分、中介或直接作用。
+5. **竞争解释**：共同上游、细胞组成变化、毒性、批次、时间错位、反向因果或旁路。
+
+证据层级不能混用：
+
+- **相关性**：A 与 Y 共变；不能证明方向或排除共同原因。
+- **时间先后**：A 先于 Y；增强方向判断，但不等于因果。
+- **必要性**：去除 A 后 Y 减弱；说明当前背景下 A 可能必要。
+- **充分性**：单独引入 A 能诱导 Y；说明特定条件下 A 可能足够。
+- **回补 / rescue**：先破坏某环节，再恢复该环节或下游，看目标表型能否按预测恢复；适合区分关键路径和脱靶解释。
+- **中介关系**：A 对 Y 的作用是否主要经过 B；需要能区分 A→B→Y 与并行路径的干预组合。
+- **直接作用**：还需结合结合、定位、物理互作、催化或即时响应等与“直接”相称的证据。
+
+## 最低充分设计
+
+### 1. 先写决策问题
+
+每个实验必须回答一个仍然存在的问题，例如：
+
+- A 对 Y 只是伴随，还是在当前背景下必要？
+- A 的作用是否主要通过 B？
+- 观察结果是否可以由毒性或细胞比例变化解释？
+- 该关系只在某个阶段成立，还是跨阶段稳定？
+
+如果不同结果不会改变 claim 或下一步，不为完整感增加实验。
+
+### 2. 选择干预
+
+根据 claim 选择单个或组合设计：
+
+- loss-of-function：检验必要性；
+- gain-of-function：检验充分性；
+- orthogonal perturbation：用不同原理的工具排除脱靶；
+- temporal perturbation：检验时间顺序和窗口；
+- dose-response：检查效应是否随干预强度变化；
+- mediator perturbation：区分中介和并行路径；
+- rescue / add-back：检验被破坏的关键路径能否恢复；
+- lineage / cell-type restriction：检验作用来自哪个细胞或状态。
+
+不是每条机制边都需要相同设计。优先验证会改变主线的关键边、最容易混淆的替代解释和最脆弱的核心 claim。
+
+### 3. 配置对照与读出
+
+至少明确：
+
+- 基线对照和干预对照；
+- 目标是否真正被改变；
+- 主要表型读出；
+- 能识别毒性、组成变化或非特异效应的读出；
+- 样本、重复和统计计划由项目设计决定，不套固定数字。
+
+### 4. 预先写结果分支
+
+对每项关键实验写清：
+
+- 结果支持预期时，最多能把 claim 提升到哪一层；
+- 只支持一部分时，保留什么、删掉什么；
+- 结果相反时，是否提示方向颠倒、背景依赖或新 GAP；
+- 无差异时，先判断实验无效还是生物学关系不成立。
+
+## rescue 何时值得做
+
+rescue 通常在以下情况下信息增益高：
+
+- loss-of-function 结果可能来自脱靶或一般损伤；
+- 需要证明某个下游节点是上游效应的关键中介；
+- 一个核心因果 claim 将决定论文主线、临床解释或重大投入；
+- 回补结果能明确区分两种竞争机制。
+
+以下情况不机械要求：
+
+- 当前目标只是可靠描述或预测，不主张因果；
+- 表型尚未稳定复现；
+- 更便宜的正交扰动已足够区分活的不确定性；
+- 网络存在多条冗余路径，单一回补无法代表完整机制；
+- 伦理、样本或模型限制使 rescue 不可解释；
+- rescue 结果无论如何都不会改变当前决策。
+
+“做了多少个 rescue”“机制有几层”不能直接推出期刊分区、影响因子或论文质量。评价必须回到科学问题、创新性、claim 重要性、证据与 claim 是否匹配、领域标准和真实审稿环境。
+
+## 输出合同
+
+输出应包含：
+
+1. 当前可支持的因果 claim 与明确不能说的部分；
+2. 主要竞争解释；
+3. 最值得验证的关键边或关键节点；
+4. 最低充分的干预、对照和读出；
+5. rescue 是否必要及理由；
+6. 各结果分支如何改变 claim 和下一步；
+7. 仍然缺失但会真正改变结论的证据。
+
+避免：
+
+- 把相关性写成因果；
+- 把论文已有机制直接变成本项目机制；
+- 为每个箭头机械安排相同 rescue；
+- 用固定四组、固定层数或固定样本量冒充设计；
+- 用 rescue 完整度直接预测“一区”“10+”；
+- 结果不符合文献时修剪自己的数据去迎合先例。
+
+## 失败分支
+
+- **干预未改变目标**：先修正工具或有效性判断，不能据此否定生物学关系。
+- **表型变化但伴随明显毒性/组成变化**：降低 claim，增加能区分特异效应的设计。
+- **单一节点回补失败**：判断剂量、时序、定位和网络冗余；不要自动升级成更多 rescue。
+- **自己的结果与论文相反**：检查技术与背景差异；若结果可靠，把冲突作为候选 GAP。
+- **证据已经足够支持当前目标**：停止，不为模板完整继续堆实验。

@@ -1,0 +1,41 @@
+{
+  "skill_name": "sci-writing-and-revision",
+  "evals": [
+  {
+    "id": 1,
+    "name": "普通 SCI 主线与 Figure",
+    "prompt": "我有四张结果图和一个核心发现，请按普通 SCI 论文的证据依赖安排 Results 顺序，并说明每图职责。",
+    "expected_output": "冻结可支持 claim，按读者理解和证据依赖安排 Figure 与正文，不强行固定图数。",
+    "files": [],
+    "expectations": [
+      "每幅图承担清晰且不重复的职责",
+      "观察、推断、假设和验证事实分开",
+      "不凭空补机制或承诺期刊层级"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "审稿意见局部返修",
+    "prompt": "审稿人质疑我的因果措辞，但没有要求新实验，请帮我判断哪些地方必须改、哪些可以解释。",
+    "expected_output": "建立意见映射，校准 claim 与正文/回复，区分必要修复、解释、合理不同意和扩需求。",
+    "files": [],
+    "expectations": [
+      "逐项对应审稿意见和稿件位置",
+      "不把每条意见自动升级成新实验",
+      "复验本轮改动及其真实影响范围"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Nature 专门路由",
+    "prompt": "请把我的结果直接改成 Nature 风格正文，并按 Nature 审稿意见写正式逐条回复。",
+    "expected_output": "说明 Nature 风格起草和正式回复分别交给 nature-writing/nature-polishing 与 nature-response，本 Skill 只保留证据和主线判断。",
+    "files": [],
+    "expectations": [
+      "明确普通 SCI 写作与 Nature 专门能力的边界",
+      "不因路由变化扩大 claim",
+      "给出下一 owner"
+    ]
+  }
+  ]
+}
