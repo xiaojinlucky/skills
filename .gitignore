@@ -1,3 +1,4 @@
+# Public Skills repository hygiene; ignore rules below are unchanged
 # Credentials and local configuration
 .env
 .env.*

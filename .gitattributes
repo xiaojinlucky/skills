@@ -1,3 +1,4 @@
+# Public Skills repository text normalization
 * text=auto
 *.md text eol=lf
 *.json text eol=lf
