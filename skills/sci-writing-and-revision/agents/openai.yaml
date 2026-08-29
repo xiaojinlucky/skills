@@ -1,6 +1,6 @@
 interface:
   display_name: "SCI 写作与返修策略"
-  short_description: "用科学问题组织 Figure、结论层级、故事和返修优先级"
+  short_description: "用科学问题理清 Figure、结论层级、故事和返修优先级"
   brand_color: "#2F6B5F"
   default_prompt: "Use $sci-writing-and-revision to design the Figure logic and revision strategy for this study."
 policy:

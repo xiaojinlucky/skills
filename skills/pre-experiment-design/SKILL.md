@@ -8,16 +8,6 @@ metadata:
 
 # 预实验设计
 
-## 共享内核
-
-进入本 Skill 前，按当前宿主提供的共享科研规则读取：
-
-- `shared/research-core.md`
-- `shared/execution-and-validity.md`
-- `shared/expression-core.md`
-
-这里使用逻辑资源名，不依赖用户目录或宿主私有绝对路径。资源无法解析时明确说明并按最小降级继续，不猜测共享规则。
-
 本文件只负责预实验的决策设计。
 
 ## 独立职责

@@ -1,6 +1,6 @@
 interface:
   display_name: "假设构建"
-  short_description: "把现象和线索变成可证伪、可递进验证的科学假设与实验预测"
+  short_description: "把现象和线索写成可证伪、可逐步验证的科学假设与实验预测"
   brand_color: "#2F6B5F"
   default_prompt: "Use $hypothesis-construction to turn these observations into a staged and falsifiable hypothesis."
 policy:

@@ -1,6 +1,6 @@
 interface:
   display_name: "文献挖掘"
-  short_description: "从文献中提取研究设计、矛盾、空白、可迁移切入点与验证方向"
+  short_description: "从文献中找出研究设计、矛盾、空白、可借用的切入点与验证方向"
   brand_color: "#2F6B5F"
   default_prompt: "Use $literature-mining to mine this literature for research designs, contradictions, and testable entry points."
 policy:

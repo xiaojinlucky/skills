@@ -8,17 +8,6 @@ metadata:
 
 # 科学假设构建
 
-## 共享内核
-
-进入本 Skill 前，按当前宿主提供的共享科研规则读取：
-
-- `shared/research-core.md`
-- `shared/expression-core.md`
-
-仅当任务要形成正式验证、执行方案、独立验证或更新 `validity_gate` 时，按需读取 `shared/execution-and-validity.md`。
-
-这里使用逻辑资源名，不依赖用户目录或宿主私有绝对路径。资源无法解析时明确说明并按最小降级继续，不猜测共享规则。
-
 本文件只负责从项目内证据形成可证伪假设。
 
 ## 独立职责

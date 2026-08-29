@@ -1,7 +1,7 @@
 interface:
   display_name: "Meta Research Hub"
-  short_description: "识别科研阶段，只调动能改变主线或下一行动的相关方法 skill"
+  short_description: "从科研问题出发，确定下一项值得做的判断和方法"
   brand_color: "#2F6B5F"
-  default_prompt: "用 $meta-research-hub（Meta师兄）先识别会改变主线、核心内容、方法或下一行动的未决问题，再统筹真正拥有这些问题的科研方法。"
+  default_prompt: "用 $meta-research-hub（Meta师兄）说明我的研究阶段、证据和当前难题，再确定最值得处理的下一项科研判断。"
 policy:
   allow_implicit_invocation: true

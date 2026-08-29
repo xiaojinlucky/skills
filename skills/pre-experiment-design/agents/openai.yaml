@@ -1,6 +1,6 @@
 interface:
   display_name: "预实验设计"
-  short_description: "设计最小但能真正改变继续、转向或止损决定的预实验与判定规则"
+  short_description: "设计规模尽量小、但能真正改变继续、转向或停止决定的预实验与判定规则"
   brand_color: "#2F6B5F"
   default_prompt: "Use $pre-experiment-design to choose the smallest preliminary test that can change my project decision."
 policy:

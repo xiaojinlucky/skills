@@ -7,7 +7,6 @@ metadata:
   tags: [literature, reading-strategy, topic-finding, six-step, ABC-model, four-types]
   related_skills: [causality-rescue, research-entry, review-writing, topic-convergence]
 ---
-
 # 文献挖掘与阅读
 
 ## R  核心论点 (Reading)
@@ -217,8 +216,3 @@ metadata:
 - composes-with: research-entry, topic-convergence, review-writing, causality-rescue
 
 ---
-
-
-## 共享内核
-
-直接或经总入口使用本 Skill 时，每个任务只读取一次当前宿主提供的共享科研规则中的 `shared/research-core.md`；产生用户可见中文科研内容时再按需读取 `shared/expression-core.md`。这里使用逻辑资源名，不依赖用户目录或宿主私有绝对路径；资源无法解析时明确说明并按最小降级继续，不猜测共享规则。科研创新隔离墙和共同表达只以这两份 shared canonical 为准，本 Skill 不复制第二份。
