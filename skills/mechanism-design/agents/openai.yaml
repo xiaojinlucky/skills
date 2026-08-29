@@ -1,7 +1,0 @@
-interface:
-  display_name: "机制设计"
-  short_description: "围绕核心关系选择机制层次、关键节点、实验安排和关键对照"
-  brand_color: "#2F6B5F"
-  default_prompt: "Use $mechanism-design to design the shortest convincing mechanism route for this finding."
-policy:
-  allow_implicit_invocation: true

@@ -1,6 +1,6 @@
 ---
 name: meta-research-hub
-description: Use for Chinese biomedical, bioinformatics, omics, experimental, grant, paper, thesis, or research-strategy questions that span multiple stages, need a clear order, or require deciding the next action. "Meta师兄", "做科研的Meta师兄", "Meta系列 Skills", "MetaSci", "meta skills", "meta-superpowers" and "meta-research-hub" are alternative names for this Skill. Do not use it when the question clearly belongs to one stage and the next action is already clear.
+description: Use when a Chinese biomedical, bioinformatics, omics, experimental, grant, paper, thesis, or research-strategy question spans multiple stages, needs a clear order, or requires deciding the next action. Also use it when comparing papers, reconstructing a paper's mainline, inferring an unstated method function, or building a direction-level evidence map. "Meta师兄", "做科研的Meta师兄", "Meta系列 Skills", "MetaSci", "meta skills", "meta-superpowers" and "meta-research-hub" are alternative names for this Skill. Do not use it when the question clearly belongs to one stage and the next action is already clear.
 ---
 
 # Meta Research Hub
@@ -14,6 +14,8 @@ description: Use for Chinese biomedical, bioinformatics, omics, experimental, gr
 - 不同分析或实验结果互相矛盾，需要判断先复核什么。
 - 假设、机制、预实验、论文或开题材料之间需要安排顺序。
 - 资源有限，需要决定继续、收缩、转向或停止。
+- 想比较多篇论文实际怎么做，或把一篇论文的图、正文、图注和 Methods 串成主线。
+- 不同方法名看起来不同，但怀疑它们实际承担的是相近功能，或想把文献整理成方向级工作地图。
 
 问题已经明确且只属于一个专业阶段时，直接使用对应的核心 Skill，不必先经过这个入口。
 
@@ -36,6 +38,19 @@ description: Use for Chinese biomedical, bioinformatics, omics, experimental, gr
 
 ## 输出
 
-回答应至少包括当前判断、关键依据、下一项行动和停止或转向条件。需要多个 Skill 时，说明每个 Skill 要解决的问题和建议顺序。
+回答应至少包括当前判断、关键依据、下一项行动和停止或转向条件。用户只给一句卡点时，先基于现有信息给出“当前判断—关键缺口—最小下一步—停止条件”，缺失信息标为未知，不要求用户先填完整表格。需要多个 Skill 时，说明每个 Skill 要解决的问题和建议顺序。
+
+## 文献综合：横向—纵向—方向图
+
+当问题是“多篇论文实际做法有什么共同点”“一篇论文到底怎样从观察走到结论”，或“这些文献能不能形成一个可行动的研究方向”时，按最终判断路由：
+
+1. **多篇论文比较共同功能**：`literature-mining` 横向比较 → 对会改变判断的关键论文做纵向核对。
+2. **看懂一篇论文**：`literature-mining` 先纵向重建 → 只有需要判断代表性或迁移性时再横向。
+3. **反推隐性方法**：从结果终点倒推输入和最小操作 → 回正文、图注、Methods、补充材料或代码核实。
+4. **形成方向级地图**：横向 → 纵向 → 合成带来源和证据状态的工作地图 → 必要时交给 `topic-convergence`。
+
+地图中的关系应写成观察、使用、支持、提示或待验证，不因叙事顺序或跨论文共同出现而自动变成因果；文献地图只能提供问题空间和方法线索，不能替代当前项目证据。逐篇核对前只能写“暂定功能相近/推断待核实”，完成输入、操作、筛选规则、输出语义和情境核对后，才可写“已核验的功能等价”。
+
+不固定论文数量、ABCD/Aim 链或图形格式；以是否改变当前判断和下一步为停止依据。输出至少说清：横向共性与差异、纵向主线、哪些是明确事实/功能等价/待核实推断，以及“这份产出改变什么、下一步做什么、什么信号下继续或停止”。
 
 它不代替具体实验、数据分析、写作执行、伦理审批、临床诊疗、正式统计审查或当前官方制度核验。

@@ -1,7 +1,0 @@
-interface:
-  display_name: "标书与开题"
-  short_description: "把问题、创新、前期证据和路线写成开题或申报论证和答辩逻辑"
-  brand_color: "#2F6B5F"
-  default_prompt: "Use $grant-and-opening to build an evidence-grounded grant or opening-report argument."
-policy:
-  allow_implicit_invocation: true

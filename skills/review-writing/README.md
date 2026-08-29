@@ -17,3 +17,11 @@
 ## 使用边界
 
 系统综述、范围综述和 Meta-analysis 仍需要协议、可复现检索、纳排标准、质量或偏倚评价及报告规范。
+
+## 安装与使用
+
+把仓库地址交给 Agent 安装本 Skill，或使用 `npx skills add https://github.com/xiaojinlucky/skills`；安装后说明综述主题、读者和已有文献池。
+
+## 配置与运行环境
+
+无需额外配置；系统综述和 Meta-analysis 仍需遵循相应报告规范。
