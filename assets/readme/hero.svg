@@ -11,15 +11,13 @@
     <text x="62" y="229" font-size="64" font-weight="800" fill="#43593B">说清楚再往下做</text>
     <text x="65" y="286" font-size="26" font-weight="650" fill="#58402E">面向研究生，帮你决定科研下一步</text>
 
-    <g transform="translate(64 326)">
-      <rect width="148" height="42" rx="21" fill="#43593B"/>
-      <text x="74" y="28" text-anchor="middle" font-size="20" font-weight="700" fill="#F0EFEB">13 个核心 Skills</text>
-      <circle cx="176" cy="21" r="5" fill="#D4A017"/>
-      <text x="194" y="28" font-size="20" font-weight="650" fill="#58402E">问题 → 证据 → 判断 → 行动</text>
+    <g transform="translate(64 322)">
+      <rect width="192" height="46" rx="23" fill="#43593B"/>
+      <text x="96" y="30" text-anchor="middle" font-size="19" font-weight="700" fill="#F0EFEB">13 个核心 Skills</text>
     </g>
 
-    <g transform="translate(720 47)">
-      <rect width="416" height="300" rx="28" fill="#43593B"/>
+    <g transform="translate(720 76)">
+      <rect width="416" height="264" rx="28" fill="#43593B"/>
       <text x="34" y="48" font-size="19" font-weight="700" letter-spacing="1.5" fill="#F2D17E">RESEARCH PATH</text>
       <text x="34" y="88" font-size="29" font-weight="750" fill="#F0EFEB">从真实问题出发</text>
 
@@ -43,12 +41,10 @@
       </g>
 
       <g font-size="20" font-weight="700" fill="#F0EFEB">
-        <text x="34" y="260">发现 GAP</text>
-        <text x="168" y="260">写出假设</text>
-        <text x="302" y="260">继续验证</text>
+        <text x="34" y="232">发现 GAP</text>
+        <text x="168" y="232">写出假设</text>
+        <text x="302" y="232">继续验证</text>
       </g>
-      <path d="M34 277 H382" stroke="#77835A" stroke-width="2"/>
-      <text x="34" y="290" font-size="17" font-weight="600" fill="#DCDCCB">每一步都回答它会改变什么判断</text>
     </g>
   </g>
 </svg>
