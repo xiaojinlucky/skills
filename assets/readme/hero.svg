@@ -21,23 +21,25 @@
       <text x="34" y="48" font-size="19" font-weight="700" letter-spacing="1.5" fill="#F2D17E">RESEARCH PATH</text>
       <text x="34" y="88" font-size="29" font-weight="750" fill="#F0EFEB">从真实问题出发</text>
 
-      <path d="M50 143 C112 143 114 205 176 205 C238 205 240 143 302 143 C344 143 356 174 376 188"
-            fill="none" stroke="#ACAD79" stroke-width="8" stroke-linecap="round"/>
+      <g transform="translate(0 -22)">
+        <path d="M50 143 C112 143 114 205 176 205 C238 205 240 143 302 143 C344 143 356 174 376 188"
+              fill="none" stroke="#ACAD79" stroke-width="8" stroke-linecap="round"/>
 
-      <g fill="#F2D17E" stroke="#43593B" stroke-width="3">
-        <circle cx="50" cy="143" r="14"/>
-        <circle cx="82" cy="153" r="8"/>
-        <circle cx="111" cy="177" r="8"/>
-        <circle cx="145" cy="201" r="8"/>
-        <circle cx="176" cy="205" r="14"/>
-        <circle cx="207" cy="200" r="8"/>
-        <circle cx="239" cy="175" r="8"/>
-        <circle cx="270" cy="151" r="8"/>
-        <circle cx="302" cy="143" r="14"/>
-        <circle cx="326" cy="148" r="8"/>
-        <circle cx="347" cy="159" r="8"/>
-        <circle cx="364" cy="174" r="8"/>
-        <circle cx="376" cy="188" r="14" fill="#D4A017"/>
+        <g fill="#F2D17E" stroke="#43593B" stroke-width="3">
+          <circle cx="50" cy="143" r="14"/>
+          <circle cx="82" cy="153" r="8"/>
+          <circle cx="111" cy="177" r="8"/>
+          <circle cx="145" cy="201" r="8"/>
+          <circle cx="176" cy="205" r="14"/>
+          <circle cx="207" cy="200" r="8"/>
+          <circle cx="239" cy="175" r="8"/>
+          <circle cx="270" cy="151" r="8"/>
+          <circle cx="302" cy="143" r="14"/>
+          <circle cx="326" cy="148" r="8"/>
+          <circle cx="347" cy="159" r="8"/>
+          <circle cx="364" cy="174" r="8"/>
+          <circle cx="376" cy="188" r="14" fill="#D4A017"/>
+        </g>
       </g>
 
       <g font-size="20" font-weight="700" fill="#F0EFEB">
