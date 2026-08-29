@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
-  <title id="title">Meta Research Hub，从科研卡点找到下一步</title>
-  <desc id="desc">面向研究生的中文科研思路 Skills，帮助用户从卡点和证据出发，作出下一步判断。</desc>
+  <title id="title">Meta Research Hub，下一步先做最能改变判断的事</title>
+  <desc id="desc">面向研究生的中文科研思路 Skills，帮助用户从卡点、证据和资源限制出发，找到下一步最值得做的工作。</desc>
 
   <rect width="1200" height="400" rx="30" fill="#F0EFEB"/>
   <path d="M0 316 C210 276 334 352 548 322 C780 289 942 320 1200 247 V400 H0 Z" fill="#E3E3D8"/>
 
   <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif">
     <text x="64" y="72" font-size="27" font-weight="750" letter-spacing="2.8" fill="#77835A">META RESEARCH HUB</text>
-    <text x="62" y="157" font-size="64" font-weight="800" fill="#43593B">先判断什么值得做</text>
-    <text x="62" y="229" font-size="64" font-weight="800" fill="#43593B">再决定怎么做</text>
-    <text x="65" y="286" font-size="26" font-weight="650" fill="#58402E">从真实卡点和已有证据出发</text>
+    <text x="62" y="157" font-size="64" font-weight="800" fill="#43593B">下一步，先做</text>
+    <text x="62" y="229" font-size="64" font-weight="800" fill="#43593B">最能改变判断的事</text>
+    <text x="65" y="286" font-size="26" font-weight="650" fill="#58402E">从卡点、证据和资源限制出发</text>
 
     <g transform="translate(64 322)">
       <rect width="192" height="46" rx="23" fill="#43593B"/>
@@ -44,8 +44,8 @@
 
       <g font-size="20" font-weight="700" fill="#F0EFEB">
         <text x="34" y="232">卡点</text>
-        <text x="124" y="232">核对证据</text>
-        <text x="240" y="232">作出判断</text>
+        <text x="124" y="232">证据</text>
+        <text x="240" y="232">判断</text>
         <text x="342" y="232">下一步</text>
       </g>
     </g>

@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="./assets/readme/hero.svg" width="100%" alt="Meta Research Hub，面向研究生的中文科研思路 Skills：从科研卡点找到下一步" />
+  <img src="./assets/readme/hero.svg" width="100%" alt="Meta Research Hub，面向研究生的中文科研思路 Skills：下一步先做最能改变判断的事" />
 </p>
 
 <p align="center">
-  面向研究生的中文科研思路 Skills。先把当前卡点说清楚，再决定下一项值得做的工作。
+  面向研究生的中文科研思路 Skills。先判断哪一步最可能改变判断，再决定下一项值得做的工作。
 </p>
 
 <p align="center">
