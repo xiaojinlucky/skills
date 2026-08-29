@@ -29,7 +29,7 @@
     "id": 3,
     "name": "宽泛方向先路由",
     "prompt": "我只有肿瘤免疫这个大方向，还没有候选或前期证据，但想直接写完整国自然标书。",
-    "expected_output": "指出科学主线尚未收敛，先交给 topic-convergence 或 meta-sci-init，再进入标书组织。",
+    "expected_output": "指出科学主线尚未收敛，先交给 topic-convergence，再进入标书组织。",
     "files": [],
     "expectations": [
       "不把材料写作替代课题形成",

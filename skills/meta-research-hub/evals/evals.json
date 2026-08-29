@@ -29,7 +29,7 @@
     "id": 3,
     "name": "资源与能力不可用时诚实降级",
     "prompt": "请根据当前已安装的科研 Skills 统筹一个跨阶段课题；如果某个共享资源或候选能力无法解析，请明确告诉我，不要猜路径。",
-    "expected_output": "使用公开的 suite manifest/inventory 解析能力，无法解析时报告缺失并采用最小降级。",
+    "expected_output": "使用宿主提供的 Skill 清单与共享科研资源，无法解析时报告缺失并采用最小降级。",
     "files": [],
     "expectations": [
       "不输出用户目录或宿主私有绝对路径作为依赖",

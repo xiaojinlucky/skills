@@ -223,7 +223,7 @@ metadata:
 
 ### 不要在以下情况使用此 skill
 
-- **具体分析或方法选择**：由 `omics-coding`、`analysis-method-scout` 或其它相应执行 skill 负责；本 skill 只保留问题、claim 和证据路径的收敛
+- **具体分析或方法选择**：由相应的分析执行 Skill 负责；本 Skill 只保留问题、claim 和证据路径的收敛
 - **已有具体课题的实质重合、GAP、被抢发或“还能不能做”判断**：由 `innovation-judgment` 负责；本 skill 在审计结论确定转向后，负责把已有结果收敛为新问题
 - **主要是焦虑、投入、节奏或继续/停止/转向支持**：由 `research-mindset` 负责；候选、数据或科学问题尚未解释时，先回到本 skill 或相应执行 skill
 
@@ -249,4 +249,4 @@ metadata:
 
 ## 共享内核
 
-直接或经总入口使用本 Skill 时，每个任务只读取一次当前宿主 `research-master` suite manifest 暴露的 `shared/research-core.md`；产生用户可见中文科研内容时再按需读取 `shared/expression-core.md`。这里使用逻辑资源名，不依赖用户目录或宿主私有绝对路径；资源无法解析时明确说明并按最小降级继续，不猜测共享规则。科研创新隔离墙和共同表达只以这两份 shared canonical 为准，本 Skill 不复制第二份。
+直接或经总入口使用本 Skill 时，每个任务只读取一次当前宿主提供的共享科研规则中的 `shared/research-core.md`；产生用户可见中文科研内容时再按需读取 `shared/expression-core.md`。这里使用逻辑资源名，不依赖用户目录或宿主私有绝对路径；资源无法解析时明确说明并按最小降级继续，不猜测共享规则。科研创新隔离墙和共同表达只以这两份 shared canonical 为准，本 Skill 不复制第二份。

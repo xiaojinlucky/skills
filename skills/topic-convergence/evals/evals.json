@@ -29,7 +29,7 @@
     "id": 3,
     "name": "纯生信方法选择边界",
     "prompt": "我只做纯生信，想在十种算法里选一个最适合我的数据集，请你直接替我选方法。",
-    "expected_output": "识别为具体分析/方法选择问题，路由到 omics-coding 或 analysis-method-scout，不把课题收敛 Skill 当执行工具。",
+    "expected_output": "识别为具体分析/方法选择问题，交给相应的分析执行 Skill，不把课题收敛 Skill 当执行工具。",
     "files": [],
     "expectations": [
       "明确当前 Skill 的职责边界",

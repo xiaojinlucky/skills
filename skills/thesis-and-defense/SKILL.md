@@ -10,7 +10,7 @@ metadata:
 
 ## 共享内核
 
-进入本 Skill 前，通过当前宿主的 `research-master` suite manifest 或等价资源解析器读取：
+进入本 Skill 前，按当前宿主提供的共享科研规则读取：
 
 - `shared/research-core.md`
 - `shared/expression-core.md`

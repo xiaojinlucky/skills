@@ -1,7 +1,0 @@
-interface:
-  display_name: "文献深度解读"
-  short_description: "拆出论文真实起点、证据链、逻辑跳步、可迁移设计和改进方向"
-  brand_color: "#2F6B5F"
-  default_prompt: "Use $literature-deep-reading to reconstruct this paper's real logic, evidence gaps, and transferable design."
-policy:
-  allow_implicit_invocation: true

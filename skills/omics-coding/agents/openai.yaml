@@ -1,4 +1,0 @@
-interface:
-  display_name: "Omics Coding"
-  short_description: "OmicVerse/SCOP 路线、官方 skill 桥接、直接主流程与 CNS 图形"
-  default_prompt: "使用 $omics-coding 选择 OmicVerse、SCOP 或分析原生函数；Python 路线先查官方 omicverse-skills，Seurat v5/AnnData 先确认对象边界，路线确认后直接写主流程，不重复堆 required/missing/overlap 检查、if/stop/assert 或自动 fallback；图形先选符合证据问题的 CNS 常见形式，优先分析原生绘图，避免图内副标题和解释性结论文字。"

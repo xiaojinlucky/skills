@@ -10,7 +10,7 @@ metadata:
 
 ## 共享内核
 
-进入本 Skill 前，通过当前宿主的 `research-master` suite manifest 或等价资源解析器始终读取：
+进入本 Skill 前，按当前宿主提供的共享科研规则读取：
 
 - `shared/research-core.md`
 - `shared/expression-core.md`
@@ -36,7 +36,7 @@ metadata:
 
 **不要进入**：
 
-- 只有宽方向，没有项目内信号：先用 topic-convergence 或 meta-sci-init。
+- 只有宽方向，没有项目内信号：先用 `topic-convergence`。
 - 需要从数据寻找具体机制候选：用 mechanism-design。
 - 已有明确因果 claim，要设计干预：用 causality-rescue。
 - 只需要复现论文：按 EXPLICIT_REPLICATION_TARGET 处理，不冒充新假设。

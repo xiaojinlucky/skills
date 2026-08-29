@@ -10,7 +10,7 @@ metadata:
 
 ## 共享内核
 
-进入本 Skill 前，通过当前宿主的 `research-master` suite manifest 或等价资源解析器读取：
+进入本 Skill 前，按当前宿主提供的共享科研规则读取：
 
 - `shared/research-core.md`
 - `shared/execution-and-validity.md`
@@ -49,7 +49,7 @@ metadata:
 
 若具体类别或当年指南会改变结构、字数、资格或预算，先核对真实文件。不能把历史模板当成当前事实。
 
-若当前只有宽泛方向而没有项目内信号，先调用 topic-convergence 或 meta-sci-init。若候选已形成但创新空间不清，先调用 innovation-judgment。
+若当前只有宽泛方向而没有项目内信号，先调用 `topic-convergence`。若候选已形成但创新空间不清，先调用 `innovation-judgment`。
 
 信息不足时按最小降级处理：只整理用户已经提供的事实、待核验事项和关键缺口，并明确“当前只能形成材料骨架，不能形成中心命题”。缺少的内容不能用看似完整的占位符、推测性证据或未经支持的可行性判断填上；只有在项目事实和真实约束足够时，才组织完整材料。
 

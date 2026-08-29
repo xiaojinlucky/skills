@@ -1,6 +1,6 @@
 ---
 name: meta-research-hub
-description: Route and coordinate complex Chinese biomedical, bioinformatics, omics, experimental, grant, paper, thesis, or research-strategy questions across the full research lifecycle. Use when the request is vague, spans multiple research stages that need ordering, contains conflicting skill responsibilities, or needs strategic participant selection and a next action. "Meta师兄", "做科研的Meta师兄", "Meta系列 Skills", "MetaSci", "meta skills", "meta-superpowers", "research-orchestrator" and "meta-research-hub" are compatibility names for this same canonical owner. A relevant Skill must own an independent unresolved question whose answer may change the mainline, core content, method, or next action; topic overlap alone is not enough. Do not use as a compulsory gateway when responsibilities and order are already clear, for a clear single-stage task, or for a zero-to-first-opening workflow owned by meta-sci-init.
+description: Route and coordinate complex Chinese biomedical, bioinformatics, omics, experimental, grant, paper, thesis, or research-strategy questions across the full research lifecycle. Use when the request is vague, spans multiple research stages that need ordering, contains conflicting skill responsibilities, or needs strategic participant selection and a next action. "Meta师兄", "做科研的Meta师兄", "Meta系列 Skills", "MetaSci", "meta skills", "meta-superpowers", "research-orchestrator" and "meta-research-hub" are compatibility names for this same canonical owner. A relevant Skill must own an independent unresolved question whose answer may change the mainline, core content, method, or next action; topic overlap alone is not enough. Do not use as a compulsory gateway when responsibilities and order are already clear or for a clear single-stage task.
 ---
 
 # Meta Research Hub
@@ -44,11 +44,11 @@ description: Route and coordinate complex Chinese biomedical, bioinformatics, om
 2. `shared/routing-and-authority.md`
 3. `shared/research-state.md`
 
-由当前宿主的 `research-master` suite manifest 或等价资源解析器把逻辑资源映射到实际路径；Skill 正文不写死用户目录或宿主私有路径。用户可见输出按需读取 `shared/expression-core.md`，遵循“产出—影响—下一步”的默认顺序；只有需要导师或组会拍板时才生成短 `advisor_decision_card`。只有复杂科研判断或长文需要补充思路时，才按同一方式读取 `methods/method-cards.md` 和 `sources/source-index.json`。正式研究设计、分析、实验、独立验证，或依赖新结果的写作/审查，才按需读取 `execution-and-validity.md`；普通单 Skill 思路流不默认读取它。资源无法解析时要明确报告缺失并按最小降级继续，不猜测其内容；已经写入 `loaded_resources` 的资源直接复用，也不要扫描四份原材料。
+由当前宿主提供的共享科研资源把逻辑资源映射到实际路径；Skill 正文不写死用户目录或宿主私有路径。用户可见输出按需读取 `shared/expression-core.md`，遵循“产出—影响—下一步”的默认顺序；只有需要导师或组会拍板时才生成短 `advisor_decision_card`。只有复杂科研判断或长文需要补充思路时，才按同一方式读取 `methods/method-cards.md` 和 `sources/source-index.json`。正式研究设计、分析、实验、独立验证，或依赖新结果的写作/审查，才按需读取 `execution-and-validity.md`；普通单 Skill 思路流不默认读取它。资源无法解析时要明确报告缺失并按最小降级继续，不猜测其内容；已经写入 `loaded_resources` 的资源直接复用，也不要扫描四份原材料。
 
 ## 合同
 
-- **进入条件**：问题模糊、跨阶段且需要排序、skill 职责冲突，或需要战略选择参与者和下一行动；多个 skill 的独立问题与职责顺序已经清楚时直接综合，从零到第一版开题交给 `meta-sci-init`。
+- **进入条件**：问题模糊、跨阶段且需要排序、Skill 职责冲突，或需要战略选择参与者和下一行动；多个 Skill 的独立问题与职责顺序已经清楚时直接综合，清楚的单阶段任务直接使用对应 Skill。
 - **唯一负责的决定**：在用户已确认目标内，确定相关 skill 集合、协作顺序，并把专业决定综合成下一项行动。
 - **退出条件**：问题已被压成共享科研状态，专业职责与顺序明确，不再存在未分配的关键判断。
 - **交接对象**：一个或多个专业 skill。普通任务按独立未决问题选择最小集合；只有用户明确要求 MetaSci 全生命周期，且每个参与者都拥有会改变主线的独立问题时，才允许超过普通路由上限。
@@ -66,7 +66,7 @@ description: Route and coordinate complex Chinese biomedical, bioinformatics, om
 6. 复杂科研输出中，每个会改变内容的专业 skill 返回一条短 `methodology_projection`：负责的问题、当前判断、关键依据、去留标准、讲述顺序和下一交接。涉及方法或 Figure 时，同时交代它如何服务核心问题和主线，以及当前判断属于探索还是确认。输出系统必须先吃完这份投影再动笔。
 7. 由主 Agent 一次综合；没有实质状态变化，不重复调用同一 skill。方法投影复用已有专业决定，不增加新的模型轮次。
 
-候选 skill 通过当前宿主公开的 `research-master` suite manifest、已安装 skill inventory 或等价发现接口解析；优先匹配 skill 的进入条件、独立未决问题和交接能力。发现接口不可用时，只使用当前已确认的 skill 名称，不猜测路径或创建不存在的能力，并在状态中记录缺失。
+候选 Skill 通过当前宿主可用的已安装 Skill 清单或等价发现接口解析；优先匹配 Skill 的进入条件、独立未决问题和交接能力。发现接口不可用时，只使用当前已确认的 Skill 名称，不猜测路径或创建不存在的能力，并在状态中记录缺失。
 
 ## 输出
 

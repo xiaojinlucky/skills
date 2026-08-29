@@ -1,16 +1,16 @@
 ---
 name: research-entry
-description: 科研新手、研一或博一学生不知道从哪里开始、如何建立领域认知、怎样区分问题/候选/假设/方法，或需要一条与当前阶段和资源相称的入门路线时使用。适用于科研认知和第一段学习路径；不用于已有具体课题设计、机制设计或实验操作，零到一开题由 meta-sci-init 统筹。
+description: 科研新手、研一或博一学生不知道从哪里开始、如何建立领域认知、怎样区分问题/候选/假设/方法，或需要一条与当前阶段和资源相称的入门路线时使用。适用于科研认知和第一段学习路径；不用于已有具体课题设计、机制设计或实验操作，形成方向后再进入开题或材料组织。
 metadata:
   tags: [research-entry, beginner, research-literacy, learning-path]
-  related_skills: [literature-mining, topic-convergence, hypothesis-construction, meta-sci-init]
+  related_skills: [literature-mining, topic-convergence, hypothesis-construction]
 ---
 
 # 科研入门路径
 
 ## 共享内核
 
-进入本 Skill 前，通过当前宿主的 `research-master` suite manifest 或等价资源解析器读取：
+进入本 Skill 前，按当前宿主提供的共享科研规则读取：
 
 - `shared/research-core.md`
 - `shared/expression-core.md`
@@ -99,7 +99,7 @@ metadata:
 
 ## 路由边界
 
-- 宽方向要形成第一版开题方案：meta-sci-init。
+- 宽方向要形成第一版开题方案：先收敛问题，再进入 `grant-and-opening`。
 - 需要系统读文献与提取发现路径：literature-mining。
 - 已有数据或异常，需要把方向收敛成具体课题：topic-convergence。
 - 已有候选，需要构造可证伪假设：hypothesis-construction。

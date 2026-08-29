@@ -1,4 +1,0 @@
-interface:
-  display_name: "HERO Anti-OverDefense"
-  short_description: "Keep agent checks proportional to real risk"
-  default_prompt: "Use $HERO-Anti-OverDefense to decide whether this extra check or process step is justified."

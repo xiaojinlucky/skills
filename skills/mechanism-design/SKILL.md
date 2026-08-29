@@ -3,21 +3,21 @@ name: mechanism-design
 description: 表型或稳定候选已经由当前课题证据产生，需要从组学、扰动、蛋白互作、调控关系或细胞状态中设计可检验机制时使用。适用于机制候选和验证链设计；不用于只有论文答案、未稳定表型或仅需具体组学执行的任务。负责把项目内信号收敛成机制候选、区分直接与间接证据，并按核心 claim 选择最低充分的验证链；不从论文复制机制答案，不把 rescue、固定样本数、线性 A-B-C-D 或期刊分数设为所有研究的硬模板。
 metadata:
   tags: [mechanism, upstream, downstream, omics, pathway, experiment-design]
-  related_skills: [causality-rescue, hypothesis-construction, pre-experiment-design, topic-convergence, omics-coding]
+  related_skills: [causality-rescue, hypothesis-construction, pre-experiment-design, topic-convergence]
 ---
 
 # 机制设计
 
 ## 共享内核
 
-每个任务只读取一次当前宿主 `research-master` suite manifest 暴露的 `shared/research-core.md`；产生用户可见中文科研内容时再按需读取 `shared/expression-core.md`。这里使用逻辑资源名，不依赖用户目录或宿主私有绝对路径；资源无法解析时明确说明并按最小降级继续，不猜测共享规则。科研创新隔离墙和共同表达只以 shared canonical 为准。
+每个任务只读取一次当前宿主提供的共享科研规则中的 `shared/research-core.md`；产生用户可见中文科研内容时再按需读取 `shared/expression-core.md`。这里使用逻辑资源名，不依赖用户目录或宿主私有绝对路径；资源无法解析时明确说明并按最小降级继续，不猜测共享规则。科研创新隔离墙和共同表达只以 shared canonical 为准。
 
 ## 独立责任
 
 - **进入条件**：当前数据、异常、扰动或预实验已经产生值得解释的表型/候选关系。
 - **唯一决定**：哪些机制候选由当前课题证据支持，哪条验证链能最有效地区分竞争解释。
 - **退出条件**：得到有证据来源、优先级、替代解释、关键实验和判停条件的机制方案。
-- **交接**：组学执行给 `omics-coding`，因果强度给 `causality-rescue`，实验排期给 `pre-experiment-design`，主线取舍给 `topic-convergence`。
+- **交接**：具体分析执行给相应的分析执行 Skill，因果强度给 `causality-rescue`，实验排期给 `pre-experiment-design`，主线取舍给 `topic-convergence`。
 
 表型尚未稳定、候选完全来自论文或用户只要纯生信执行时，不用本 Skill 强行搭机制链。
 
