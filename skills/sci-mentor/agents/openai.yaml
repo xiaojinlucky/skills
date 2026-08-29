@@ -1,4 +1,0 @@
-interface:
-  display_name: "Sci Mentor 科研导师"
-  short_description: "从读懂文献到形成科研思路并推进自己的课题"
-  default_prompt: "使用 $sci-mentor 先讲清这篇文献，再提炼作者的科研思路，并联系我的课题。"

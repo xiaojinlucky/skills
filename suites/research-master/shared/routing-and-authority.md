@@ -49,7 +49,6 @@
 - 单篇论文逻辑拆解交给 `literature-deep-reading`；全文来源化中英文读本交给 `nature-reader`；系统阅读和从文献找课题交给 `literature-mining`；检索、引文和参考文献操作交给 `nature-academic-search`。
 - 普通 SCI 写作和返修交给 `sci-writing-and-revision`；Nature 起草或投稿材料交给 `nature-writing`；纯语言风格修改交给 `nature-polishing`。
 - 普通同行评审交给 `academic-paper-reviewer`；明确 Nature/高影响力投稿前审查交给 `nature-reviewer`；完整研究到论文流水线只在用户明确要求时交给 `academic-pipeline`。
-- `sci-mentor` 是兼容入口，不参加普通自动路由；`meta-research-hub` 只在模糊、跨阶段、需要排序或职责冲突时进入。
 
 ## 每个 skill 的最小合同
 

@@ -1,7 +1,7 @@
 ---
 name: literature-deep-reading
 description: |
-  深度解读 SCI 文献时；或问「帮我解读这篇文献/带读这篇文章/分析这篇 paper 的科研逻辑/拆解这篇文章的 work model/这篇文献的课题设计思路怎么样」时。也适用于组会文献汇报准备、学习文章课题设计思路、积累科研逻辑框架。产出形式是公众号推文（BioAdvance 风格），不是学术报告。不适用于，文献检索、文献综述写作、轻量框架解析（只看 Figure 小标题不深入结果细节）。关键 trigger，文献解读、文献带读、深度解读、work model、科研逻辑、逻辑节点、课题设计借鉴、批判性思考、story 重构。
+  深度解读 SCI 文献时；或问「帮我解读这篇文献/带读这篇文章/分析这篇 paper 的科研逻辑/拆解这篇文章的 work model/这篇文献的课题设计思路怎么样」时。也适用于组会文献汇报准备、学习文章课题设计思路、积累科研逻辑框架。产出形式是公众号式论文带读推文，不是学术报告。不适用于，文献检索、文献综述写作、轻量框架解析（只看 Figure 小标题不深入结果细节）。关键 trigger，文献解读、文献带读、深度解读、work model、科研逻辑、逻辑节点、课题设计借鉴、批判性思考、story 重构。
   English triggers: 「deep read this paper」, 「interpret this article」, 「analyze paper logic」, 「work model breakdown」, 「paper dissection」, 「critical reading」.
 tags: [literature-reading, deep-interpretation, work-model, logic-analysis, critical-thinking, paper-dissection]
 related_skills: []
@@ -13,7 +13,7 @@ related_skills: []
 
 解读视角是作为文献解读者去拆解文献，不被作者牵着走。作者写出来的逻辑要复述，作者没写出来的逻辑要主动推理，作者回避的问题要点出来。
 
-产出形式是公众号推文（BioAdvance 风格），不是学术报告。以一个读完文章的同行或师兄分享怎么解读的口吻，问题驱动逐层剖析逻辑，自然融入方法论内核，不显式标章节步骤。人称用我/我们/师兄我 交替，不署名大师兄。
+产出形式是公众号式论文带读推文，不是学术报告。以一个读完文章的同行或师兄分享怎么解读的口吻，问题驱动逐层剖析逻辑，自然融入方法论内核，不显式标章节步骤。人称用我/我们/师兄我 交替，不署名大师兄。
 
 ---
 

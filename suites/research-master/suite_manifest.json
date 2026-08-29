@@ -83,9 +83,6 @@
   "cutover": {
     "install_ready": true,
     "installer": "scripts/install-suite.mjs",
-    "live_changes_allowed_in_staging": false,
-    "remove_at_atomic_cutover": [
-      "sci-mentor"
-    ]
+    "live_changes_allowed_in_staging": false
   }
 }

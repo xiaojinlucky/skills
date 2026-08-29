@@ -37,7 +37,7 @@ description: Deep-read one or a small set of biomedical, bioinformatics, omics, 
 | 用户要做什么 | 读取 |
 |---|---|
 | 组会/课题设计式拆一篇或少量论文 | 只用上面的短合同 |
-| 公众号或 BioAdvance 风格带读推文、四遍阅读、work model 叙事 | `references/wechat-deep-read.md` |
+| 公众号式论文带读推文、四遍阅读、work model 叙事 | `references/wechat-deep-read.md` |
 | PDF 解析、MinerU、DOI 取全文 | `references/pdf-and-tools.md` |
 | 需要对照或抽回 2026-07-22 原始长稿全文 | `references/archive-original-SKILL.md` |
 

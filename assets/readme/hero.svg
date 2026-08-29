@@ -1,30 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
-  <title id="title">Meta Research Hub：从 GAP 到下一步</title>
-  <desc id="desc">面向研究生的中文科研思路 Skills，用克制的 Palm 椰林绿视觉呈现从发现问题到持续推进课题的研究路径。</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+  <title id="title">Meta Research Hub：把科研卡点推进成下一步</title>
+  <desc id="desc">Palm 椰林绿主题的中文科研方法 Skills 首页。左侧为项目名称与价值，右侧以十三个节点组成从问题到下一步的研究路径。</desc>
 
-  <rect width="1200" height="300" rx="28" fill="#F0EFEB"/>
+  <rect width="1200" height="400" rx="30" fill="#F0EFEB"/>
+  <path d="M0 316 C210 276 334 352 548 322 C780 289 942 320 1200 247 V400 H0 Z" fill="#E3E3D8"/>
 
-  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif">
-    <text x="66" y="64" font-size="38" font-weight="700" letter-spacing="1.8" fill="#43593B">META RESEARCH HUB</text>
-    <text x="66" y="158" font-size="78" font-weight="800" fill="#43593B">从 GAP 到下一步</text>
-    <text x="68" y="228" font-size="44" font-weight="700" fill="#58402E">把课题推进成一条线</text>
-  </g>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif">
+    <text x="64" y="72" font-size="27" font-weight="750" letter-spacing="2.8" fill="#77835A">META RESEARCH HUB</text>
+    <text x="62" y="157" font-size="64" font-weight="800" fill="#43593B">把科研卡点</text>
+    <text x="62" y="229" font-size="64" font-weight="800" fill="#43593B">推进成下一步</text>
+    <text x="65" y="286" font-size="26" font-weight="650" fill="#58402E">面向研究生的中文科研思路流</text>
 
-  <!-- Project-native research path. Decorative only; all explanatory text stays in Markdown. -->
-  <g aria-hidden="true">
-    <path d="M850 230 C892 230 899 184 935 184 C974 184 981 136 1018 136 C1060 136 1068 86 1116 86"
-          fill="none" stroke="#ACAD79" stroke-width="12" stroke-linecap="round"/>
+    <g transform="translate(64 326)">
+      <rect width="148" height="42" rx="21" fill="#43593B"/>
+      <text x="74" y="28" text-anchor="middle" font-size="20" font-weight="700" fill="#F0EFEB">13 个核心 Skills</text>
+      <circle cx="176" cy="21" r="5" fill="#D4A017"/>
+      <text x="194" y="28" font-size="20" font-weight="650" fill="#58402E">问题 → 证据 → 判断 → 行动</text>
+    </g>
 
-    <circle cx="850" cy="230" r="38" fill="#F2D17E" stroke="#58402E" stroke-width="4"/>
-    <text x="850" y="243" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="44" font-weight="700" fill="#58402E">?</text>
+    <g transform="translate(720 47)">
+      <rect width="416" height="300" rx="28" fill="#43593B"/>
+      <text x="34" y="48" font-size="19" font-weight="700" letter-spacing="1.5" fill="#F2D17E">RESEARCH PATH</text>
+      <text x="34" y="88" font-size="29" font-weight="750" fill="#F0EFEB">从真实问题出发</text>
 
-    <rect x="899" y="148" width="72" height="72" rx="18" fill="#F0EFEB" stroke="#77835A" stroke-width="4"/>
-    <path d="M920 170h30M920 185h24M920 200h18" fill="none" stroke="#77835A" stroke-width="5" stroke-linecap="round"/>
+      <path d="M50 143 C112 143 114 205 176 205 C238 205 240 143 302 143 C344 143 356 174 376 188"
+            fill="none" stroke="#ACAD79" stroke-width="8" stroke-linecap="round"/>
 
-    <rect x="982" y="100" width="72" height="72" rx="20" fill="#43593B"/>
-    <path d="M1001 137l11 11 24-27" fill="none" stroke="#F0EFEB" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <g fill="#F2D17E" stroke="#43593B" stroke-width="3">
+        <circle cx="50" cy="143" r="14"/>
+        <circle cx="82" cy="153" r="8"/>
+        <circle cx="111" cy="177" r="8"/>
+        <circle cx="145" cy="201" r="8"/>
+        <circle cx="176" cy="205" r="14"/>
+        <circle cx="207" cy="200" r="8"/>
+        <circle cx="239" cy="175" r="8"/>
+        <circle cx="270" cy="151" r="8"/>
+        <circle cx="302" cy="143" r="14"/>
+        <circle cx="326" cy="148" r="8"/>
+        <circle cx="347" cy="159" r="8"/>
+        <circle cx="364" cy="174" r="8"/>
+        <circle cx="376" cy="188" r="14" fill="#D4A017"/>
+      </g>
 
-    <circle cx="1116" cy="86" r="40" fill="#D4A017"/>
-    <path d="M1098 86h34M1121 72l14 14-14 14" fill="none" stroke="#58402E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <g font-size="20" font-weight="700" fill="#F0EFEB">
+        <text x="34" y="260">发现 GAP</text>
+        <text x="168" y="260">形成假设</text>
+        <text x="302" y="260">验证推进</text>
+      </g>
+      <path d="M34 277 H382" stroke="#77835A" stroke-width="2"/>
+      <text x="34" y="290" font-size="17" font-weight="600" fill="#DCDCCB">每一步都回答：它会改变什么判断？</text>
+    </g>
   </g>
 </svg>
