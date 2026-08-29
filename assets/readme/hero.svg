@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
-  <title id="title">Meta Research Hub，把科研问题说清楚，再决定下一步</title>
-  <desc id="desc">面向研究生的中文科研方法 Skills，帮助用户从问题出发，找到证据和下一步。</desc>
+  <title id="title">Meta Research Hub，从科研卡点找到下一步</title>
+  <desc id="desc">面向研究生的中文科研思路 Skills，帮助用户从卡点和证据出发，作出下一步判断。</desc>
 
   <rect width="1200" height="400" rx="30" fill="#F0EFEB"/>
   <path d="M0 316 C210 276 334 352 548 322 C780 289 942 320 1200 247 V400 H0 Z" fill="#E3E3D8"/>
 
   <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif">
     <text x="64" y="72" font-size="27" font-weight="750" letter-spacing="2.8" fill="#77835A">META RESEARCH HUB</text>
-    <text x="62" y="157" font-size="64" font-weight="800" fill="#43593B">把科研问题</text>
-    <text x="62" y="229" font-size="64" font-weight="800" fill="#43593B">说清楚再往下做</text>
-    <text x="65" y="286" font-size="26" font-weight="650" fill="#58402E">面向研究生，帮你决定科研下一步</text>
+    <text x="62" y="157" font-size="64" font-weight="800" fill="#43593B">先判断什么值得做</text>
+    <text x="62" y="229" font-size="64" font-weight="800" fill="#43593B">再决定怎么做</text>
+    <text x="65" y="286" font-size="26" font-weight="650" fill="#58402E">从真实卡点和已有证据出发</text>
 
     <g transform="translate(64 322)">
       <rect width="192" height="46" rx="23" fill="#43593B"/>
@@ -19,7 +19,7 @@
     <g transform="translate(720 76)">
       <rect width="416" height="264" rx="28" fill="#43593B"/>
       <text x="34" y="48" font-size="19" font-weight="700" letter-spacing="1.5" fill="#F2D17E">RESEARCH PATH</text>
-      <text x="34" y="88" font-size="29" font-weight="750" fill="#F0EFEB">从真实问题出发</text>
+      <text x="34" y="88" font-size="29" font-weight="750" fill="#F0EFEB">从真实卡点出发</text>
 
       <g transform="translate(0 -22)">
         <path d="M50 143 C112 143 114 205 176 205 C238 205 240 143 302 143 C344 143 356 174 376 188"
@@ -43,9 +43,10 @@
       </g>
 
       <g font-size="20" font-weight="700" fill="#F0EFEB">
-        <text x="34" y="232">发现 GAP</text>
-        <text x="168" y="232">写出假设</text>
-        <text x="302" y="232">继续验证</text>
+        <text x="34" y="232">卡点</text>
+        <text x="124" y="232">核对证据</text>
+        <text x="240" y="232">作出判断</text>
+        <text x="342" y="232">下一步</text>
       </g>
     </g>
   </g>
