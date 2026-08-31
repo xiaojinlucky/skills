@@ -1,30 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="1200" height="320" viewBox="0 0 1200 320"
      role="img" aria-labelledby="title desc">
-  <title id="title">卡点、证据、判断、下一步</title>
-  <desc id="desc">面向研究生的中文科研判断路径。从卡住的课题出发，收集证据，形成判断，收到下一步。</desc>
+  <title id="title">问题、证据、判断、下一步</title>
+  <desc id="desc">面向研究生的中文科研判断路径。从问题出发，核验证据，形成判断，整理成下一步。</desc>
 
   <rect width="1200" height="320" rx="34" fill="#43593B"/>
   <circle cx="1088" cy="54" r="70" fill="#D4A017" opacity="0.22"/>
   <circle cx="96" cy="276" r="90" fill="#ACAD79" opacity="0.18"/>
 
-  <path d="M180 128 C270 128 380 176 470 176 C560 176 650 128 740 128 C830 128 930 176 1020 176"
+  <path d="M180 138 C270 138 380 186 470 186 C560 186 650 138 740 138 C830 138 930 186 1020 186"
         fill="none" stroke="#ACAD79" stroke-width="8" stroke-linecap="round"/>
 
   <g fill="#F2D17E" stroke="#28311F" stroke-width="3">
-    <circle cx="180" cy="128" r="16"/>
-    <circle cx="255" cy="130" r="8"/>
-    <circle cx="330" cy="148" r="8"/>
-    <circle cx="400" cy="168" r="8"/>
-    <circle cx="470" cy="176" r="16"/>
-    <circle cx="540" cy="174" r="8"/>
-    <circle cx="610" cy="152" r="8"/>
-    <circle cx="675" cy="132" r="8"/>
-    <circle cx="740" cy="128" r="16"/>
-    <circle cx="815" cy="130" r="8"/>
-    <circle cx="885" cy="148" r="8"/>
-    <circle cx="950" cy="166" r="8"/>
-    <circle cx="1020" cy="176" r="16" fill="#D4A017"/>
+    <circle cx="180" cy="138" r="16"/>
+    <circle cx="255" cy="140" r="8"/>
+    <circle cx="330" cy="158" r="8"/>
+    <circle cx="400" cy="178" r="8"/>
+    <circle cx="470" cy="186" r="16"/>
+    <circle cx="540" cy="184" r="8"/>
+    <circle cx="610" cy="162" r="8"/>
+    <circle cx="675" cy="142" r="8"/>
+    <circle cx="740" cy="138" r="16"/>
+    <circle cx="815" cy="140" r="8"/>
+    <circle cx="885" cy="158" r="8"/>
+    <circle cx="950" cy="176" r="8"/>
+    <circle cx="1020" cy="186" r="16" fill="#D4A017"/>
   </g>
 
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif"
@@ -32,15 +32,15 @@
     <text x="64" y="52" text-anchor="start"
           font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Microsoft YaHei', monospace"
           font-size="22" font-weight="700" letter-spacing="2.4" fill="#F2D17E">META RESEARCH HUB</text>
-    <text x="180" y="252" font-size="42" font-weight="750">卡点</text>
-    <text x="470" y="252" font-size="42" font-weight="750">证据</text>
-    <text x="740" y="252" font-size="42" font-weight="750">判断</text>
-    <text x="1020" y="252" font-size="42" font-weight="750">下一步</text>
+    <text x="180" y="258" font-size="44" font-weight="750">问题</text>
+    <text x="470" y="258" font-size="44" font-weight="750">证据</text>
+    <text x="740" y="258" font-size="44" font-weight="750">判断</text>
+    <text x="1020" y="258" font-size="44" font-weight="750">下一步</text>
   </g>
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif"
      fill="#ACAD79" font-size="28" font-weight="700" text-anchor="middle">
-    <text x="325" y="252">→</text>
-    <text x="605" y="252">→</text>
-    <text x="880" y="252">→</text>
+    <text x="325" y="258">→</text>
+    <text x="605" y="258">→</text>
+    <text x="880" y="258">→</text>
   </g>
 </svg>
