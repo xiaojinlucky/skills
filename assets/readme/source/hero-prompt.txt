@@ -1,0 +1,10 @@
+Use case: stylized-concept
+Asset type: transparent cutout subject for a GitHub README hero
+Input image: the repository owner's illustrated avatar as a reference for the character, face, hairstyle, clothing language, and hand-drawn ink style
+Primary request: create a refined editorial illustration of the same avatar-like young man as a calm research-workbench figure
+Composition: one isolated subject, seated casually, three-quarter view facing left, cropped from about knees upward, generous transparent padding, visual weight toward the right side
+Style: hand-inked editorial illustration with subtle paper grain, clean silhouette, restrained linework, quietly expressive rather than glossy or photorealistic
+Palette: Palm-inspired low-saturation paper cream #F0EFEB, dark brown #58402E, deep olive #43593B, muted olive #77835A, dusty yellow-green #ACAD79, amber #D4A017
+Constraints: no scenery, floor, cast shadow, border, UI, letters, numbers, logo, or watermark
+Background: perfectly flat solid magenta #FF00FF with no gradient, texture, floor, reflection, or shadow
+Negative: do not render title text, body copy, labels, or any written characters into the generated layer
