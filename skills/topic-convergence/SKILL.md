@@ -149,7 +149,7 @@ metadata:
    - 完成标准：若细胞来源会改变解释且有合适证据，明确基因主要表达细胞类型；否则记录“不适用/不可评估”及其对候选解释的影响
 
 4. **查文献定位已知边界和创新空间**
-   - 候选已经由当前数据产生后，调用 `innovation-judgment` 和 `nature-academic-search` 判断直接关系是否已知、部分已知、矛盾、存在 GAP 或尚未报道
+   - 候选已经由当前数据产生后，调用 `innovation-judgment`，并检索已发表文献，判断直接关系是否已知、部分已知、矛盾、存在 GAP 或尚未报道
    - 完成标准：说明当前候选与已发表证据真正重合在哪里、差异在哪里、是否仍有重要且可验证的新问题；不按文献篇数机械淘汰
    - 没有高水平论文支持不能自动降级。若当前数据可靠且多层证据相互支持，应进一步确认是真 GAP、新背景还是间接机制线索
 
@@ -272,7 +272,3 @@ metadata:
 - `mechanism-design`：设计机制（表型确定后用）
 - `literature-mining`：横向比较实际功能、纵向重建发现路径、划定已知边界并形成方向级证据—方法网络；本 skill 消费这份文献输入，但不从论文结论预填本项目答案
 
-## 相关 skills (阶段 3 填充)
-
-- depends-on: research-entry, literature-mining
-- composes-with: literature-mining, research-entry, research-mindset, hypothesis-construction, mechanism-design
