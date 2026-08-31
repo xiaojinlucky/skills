@@ -236,10 +236,3 @@ metadata:
 - `hypothesis-construction`：假设构建（验证不出假设时检查假设是否纯空想）
 
 ---
-
-## 相关 skills (阶段 3 填充)
-
-- depends-on: innovation-judgment
-- composes-with: hypothesis-construction, innovation-judgment, topic-convergence, pre-experiment-design
-
----

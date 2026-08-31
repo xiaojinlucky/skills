@@ -161,7 +161,7 @@ AI 工具可以辅助综述初稿、结构整理、表图说明和投稿清单�
 **检查点 2（step 5 之后）**：每个主要部分是否有基于证据的综合判断，并清楚区分来源结论、作者综合和仍未解决的问题。只有文献罗列时回到 step 5 凝练。
 
 - 如果框架提取（step 3）直接照抄某篇综述的小标题，修改重组为自己的框架，照抄框架会被审稿人判定无创新性。
-- 如果 `nature-academic-search` 检索返回结果太少，换多查询策略重检，单一查询策略容易漏掉相关文献。
+- 如果检索返回结果太少，换多查询策略重检，单一查询策略容易漏掉相关文献。
 - 如果通过综述找未解决科学问题（step 7）找不到切入点，用四种逻辑推理逐个试（整体观念 / 研究空白 / 基础转化 / 跨领域整合），不要只靠一种方法就放弃。
 
 ---
@@ -191,13 +191,5 @@ AI 工具可以辅助综述初稿、结构整理、表图说明和投稿清单�
 - `sci-writing-and-revision`：研究性 SCI 论文写作（不同写作类型）
 - `literature-mining`：读文献找课题（本 skill 前置）
 - `thesis-and-defense`：毕业论文（绪论部分可参考本 skill）
-
----
-
-## 相关 skills (阶段 3 填充)
-
-- depends-on: literature-mining
-- contrasts-with: sci-writing-and-revision
-- composes-with: literature-mining, thesis-and-defense
 
 ---
